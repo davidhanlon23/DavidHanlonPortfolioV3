@@ -3,7 +3,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Home",
-  description: "Trendz - Smart Trading Journal Software for Data-Driven Traders. Transform your trading performance with Trendz, the all-in-one trading journal that helps you track, analyze, and improve your trades. Features advanced analytics, performance metrics, and actionable insights to optimize your trading strategy.",
+  description: "David M. Hanlon | Senior Software Engineer - Professional portfolio showcasing full-stack development expertise, innovative projects, and technical leadership. Explore my work in software engineering, web development, and technology solutions."
 };
 
 export default function HomePage() {
