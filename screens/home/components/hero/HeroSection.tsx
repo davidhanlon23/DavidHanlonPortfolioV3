@@ -9,18 +9,16 @@ const HeroSection = () => {
                   <div className="flex flex-col items-center space-y-4 text-center">
                     <div className="space-y-2">
                       <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
-                        Master Your Trades with Trendz
+                       Full Stack Engineer, Entrepreneur, & Blockchain Enthusiast
                       </h1>
                       <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
-                        Track your trades, analyze your performance, and get personalized insights to improve your trading strategy.
+                        Together lets change the world                      
                       </p>
                     </div>
                     <div className="space-x-4">
-                      <Link href="/sign-up">
-                        <Button>Join The Waitlist <ChevronRight className="ml-2 h-4 w-4" /></Button>
-                      </Link>
-                      <Link href="#features">
-                        <Button variant="outline">Explore Features</Button>
+                      <Button onClick={() => window.open('/Resume/DavidHanlonResume.pdf')}>Resume <ChevronRight className="ml-2 h-4 w-4" /></Button>
+                      <Link href="#contact">
+                        <Button variant="outline">Work with Me</Button>
                       </Link>
                     </div>
                   </div>
