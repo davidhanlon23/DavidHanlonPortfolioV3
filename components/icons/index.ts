@@ -1,1 +1,1 @@
-export { default as TrendzLogo } from './logo';
+export { default as Logo } from './logo';
