@@ -19,6 +19,9 @@ const NavBar = () => {
           <Link className="text-sm font-medium hover:underline underline-offset-4" href="/#education">
             Education
           </Link>
+          <Link className="text-sm font-medium hover:underline underline-offset-4" href="/#contact">
+            Contact
+          </Link>
           <DarkModeToggle />
         </nav>
       </header>

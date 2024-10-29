@@ -1,5 +1,5 @@
 "use client"
-import { Testimonials, HeroSection, Education, Experience, Projects} from './components';
+import { Testimonials, HeroSection, Education, Experience, Projects, Contact } from './components';
 
 const Home = () => {
     return(
@@ -8,6 +8,7 @@ const Home = () => {
               <Projects />
               <Experience />
               <Education />
+              <Contact />
               <Testimonials />
           </div>
     );
