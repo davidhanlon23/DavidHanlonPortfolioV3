@@ -1,13 +1,14 @@
 "use client"
-import { Features, Testimonials, HeroSection } from './components';
+import { Testimonials, HeroSection, Education, Experience, Projects} from './components';
 
 const Home = () => {
     return(
             <div className="flex flex-col min-h-screen">
               <HeroSection />
-              <Features />
+              <Projects />
+              <Experience />
+              <Education />
               <Testimonials />
-              {/* <Pricing /> */}
           </div>
     );
 };
