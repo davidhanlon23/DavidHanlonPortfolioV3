@@ -5,7 +5,7 @@ import Logo from '@/components/icons/logo';
 
 const NavBar = () => {
     return(
-        <header className="px-4 lg:px-6 h-14 flex items-center">
+        <header className="px-4 lg:px-6 h-14 flex items-center relative z-50">
         <Link className="flex items-center justify-center" href="/">
           <Logo />
         </Link>

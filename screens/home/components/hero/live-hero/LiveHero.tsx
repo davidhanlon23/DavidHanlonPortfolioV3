@@ -1,7 +1,9 @@
 'use client'
-
-import React, { useRef, useEffect, useState } from 'react'
-
+import React, { useRef, useEffect, useState } from 'react';
+import Link from 'next/link';
+import { ChevronRight } from 'lucide-react';
+import { useIsDarkMode } from '@/hooks';
+import { Button } from '@/ui';
 interface Star {
   x: number
   y: number
@@ -12,6 +14,7 @@ interface Star {
 export default function LiveHero() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 })
+  const { isDarkMode } = useIsDarkMode();
 
   useEffect(() => {
     const handleResize = () => {
@@ -51,7 +54,7 @@ export default function LiveHero() {
     }
 
     const animate = () => {
-      ctx.fillStyle = 'rgba(0, 0, 0, 0.1)'
+      ctx.fillStyle = isDarkMode ? 'rgba(0, 0, 0, 0.1)' : 'rgba(255, 255, 255, 0.9)'
       ctx.fillRect(0, 0, dimensions.width, dimensions.height)
 
       for (let star of stars) {
@@ -68,7 +71,8 @@ export default function LiveHero() {
         const brightness = 1 - star.z / dimensions.width
 
         ctx.beginPath()
-        ctx.fillStyle = `rgba(255, 255, 255, ${brightness})`
+        ctx.fillStyle = isDarkMode ? `rgba(255, 255, 255, ${brightness})` : `rgba(0, 0, 0, ${brightness})`;
+
         ctx.arc(x, y, size, 0, 2 * Math.PI)
         ctx.fill()
 
@@ -82,17 +86,31 @@ export default function LiveHero() {
   }, [dimensions])
 
   return (
-    <div className="relative w-full h-screen overflow-hidden">
+    <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 flex justify-center min-h-screen overflow-hidden">
       <canvas
         ref={canvasRef}
         width={dimensions.width}
         height={dimensions.height}
         className="absolute top-0 left-0 w-full h-full"
       />
-      <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white">
-        <h1 className="text-5xl font-bold mb-4">Welcome to the Galaxy</h1>
-        <p className="text-xl">Explore the wonders of the universe</p>
-      </div>
-    </div>
+      <div className="px-4 md:px-6 relative z-10 flex flex-col items-center justify-center h-full text-center">
+                  <div className="flex flex-col items-center space-y-4 text-center">
+                    <div className="space-y-2">
+                      <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
+                       Full Stack Engineer, Entrepreneur, & Blockchain Enthusiast
+                      </h1>
+                      <p className="mx-auto max-w-[700px]">
+                        Together lets change the world                      
+                      </p>
+                    </div>
+                    <div className="space-x-4">
+                      <Button onClick={() => window.open('/Resume/DavidHanlonResume.pdf')}>Resume <ChevronRight className="ml-2 h-4 w-4" /></Button>
+                      <Link href="#contact">
+                        <Button variant="outline">Work with Me</Button>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+    </section>
   )
 }
