@@ -14,6 +14,7 @@ const projects: Project[] = [
     imageUrl: '/placeholder.svg?height=200&width=300',
     githubUrl: 'https://github.com/davidhanlon23/ai-task-manager',
     liveUrl: 'https://ai-task-manager.vercel.app',
+    images: ['https://media.istockphoto.com/id/1794813350/photo/christmas-decorating.jpg?s=1024x1024&w=is&k=20&c=79KS9CdVQEZYaKDTPQZtUO_owI4WMQdvyab0GLfiV6I=', 'https://media.istockphoto.com/id/1744915333/photo/drone-view-of-a-river-in-rural-scotland.jpg?s=1024x1024&w=is&k=20&c=u_7U4N8M1dl52iy-sgEnXK6NaeEMuYi9z8LMDLtBNJM=', 'https://media.istockphoto.com/id/2158201222/photo/happy-female-tourist-exploring-vibrant-weekend-market-with-backpack.jpg?s=1024x1024&w=is&k=20&c=EsIIdwLtjMgoWtpC-N2Gjr81DGwH5_071QcFQNbr2KI=']
   },
   {
     id: 2,
@@ -23,6 +24,7 @@ const projects: Project[] = [
     imageUrl: '/placeholder.svg?height=200&width=300',
     githubUrl: 'https://github.com/davidhanlon23/blockchain-voting',
     liveUrl: 'https://blockchain-voting.vercel.app',
+    images: ['https://media.istockphoto.com/id/1794813350/photo/christmas-decorating.jpg?s=1024x1024&w=is&k=20&c=79KS9CdVQEZYaKDTPQZtUO_owI4WMQdvyab0GLfiV6I=', 'https://media.istockphoto.com/id/1744915333/photo/drone-view-of-a-river-in-rural-scotland.jpg?s=1024x1024&w=is&k=20&c=u_7U4N8M1dl52iy-sgEnXK6NaeEMuYi9z8LMDLtBNJM=', 'https://media.istockphoto.com/id/2158201222/photo/happy-female-tourist-exploring-vibrant-weekend-market-with-backpack.jpg?s=1024x1024&w=is&k=20&c=EsIIdwLtjMgoWtpC-N2Gjr81DGwH5_071QcFQNbr2KI=']
   },
   {
     id: 3,
@@ -32,8 +34,8 @@ const projects: Project[] = [
     imageUrl: '/placeholder.svg?height=200&width=300',
     githubUrl: 'https://github.com/davidhanlon23/ar-interior-designer',
     liveUrl: 'https://apps.apple.com/us/app/ar-interior-designer',
+    images: ['https://media.istockphoto.com/id/1794813350/photo/christmas-decorating.jpg?s=1024x1024&w=is&k=20&c=79KS9CdVQEZYaKDTPQZtUO_owI4WMQdvyab0GLfiV6I=', 'https://media.istockphoto.com/id/1744915333/photo/drone-view-of-a-river-in-rural-scotland.jpg?s=1024x1024&w=is&k=20&c=u_7U4N8M1dl52iy-sgEnXK6NaeEMuYi9z8LMDLtBNJM=', 'https://media.istockphoto.com/id/2158201222/photo/happy-female-tourist-exploring-vibrant-weekend-market-with-backpack.jpg?s=1024x1024&w=is&k=20&c=EsIIdwLtjMgoWtpC-N2Gjr81DGwH5_071QcFQNbr2KI=']
   },
-  // Add more projects as needed
 ]
 
 export function ProjectsSection() {

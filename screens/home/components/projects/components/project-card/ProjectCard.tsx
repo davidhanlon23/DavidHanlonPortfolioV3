@@ -1,27 +1,22 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Card, CardContent, CardFooter } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
 import { Project } from '@/screens/home/components/projects/types'
+import { ImageCarousel, Badge, Card, CardContent, CardFooter } from '@/ui'
 
 interface ProjectCardProps {
   project: Project
   onClick: () => void
 }
 
-function ProjectCard({ project, onClick }: ProjectCardProps) {
+ function ProjectCard({ project, onClick }: ProjectCardProps) {
   return (
     <motion.div
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
     >
       <Card className="overflow-hidden cursor-pointer" onClick={onClick}>
-        <img
-          src={project.imageUrl}
-          alt={project.title}
-          className="w-full h-48 object-cover"
-        />
+        <ImageCarousel images={project.images} alt={project.title} />
         <CardContent className="p-4">
           <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
           <p className="text-muted-foreground mb-4">{project.description}</p>

@@ -1,7 +1,5 @@
 'use client'
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog'
-import { Badge } from '@/components/ui/badge'
-import { Button } from '@/components/ui/button'
+import { Badge, Button, Dialog, DialogContent, DialogHeader, DialogTitle, ImageCarousel } from '@/ui'
 import { ExternalLink, Github } from 'lucide-react'
 import { Project } from '@/screens/home/components/projects/types'
 
@@ -18,11 +16,7 @@ function ProjectModal({ project, onClose }: ProjectModalProps) {
           <DialogTitle>{project.title}</DialogTitle>
         </DialogHeader>
         <div className="grid gap-4 py-4">
-          <img
-            src={project.imageUrl}
-            alt={project.title}
-            className="w-full h-48 object-cover rounded-md"
-          />
+          <ImageCarousel images={project.images} alt={project.title} />
           <p className="text-muted-foreground">{project.description}</p>
           <div className="flex flex-wrap gap-2">
             {project.technologies.map((tech) => (
