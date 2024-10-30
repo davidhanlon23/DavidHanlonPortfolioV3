@@ -1,16 +1,11 @@
 import { ILogo } from "./type";
-import { calculateHeight } from "./utils";
-import { useIsDarkMode } from "@/hooks";
 
 const DavidHanlonLogo = ({
     classes = 'w-36 h-36 text-dh-secondary-dark-500 dark:text-dh-secondary-dark-500 hover:text-black dark:hover:text-white'
 }: ILogo) => {
-    const { isDarkMode } = useIsDarkMode();
-    // const defaultColor = isDarkMode ? '#fff' : '#111111';
-    // const calculatedHeight = calculateHeight(width);
     return (
         <svg className={`${classes}`} fill="currentColor"  viewBox="0 0 281 27" xmlns="http://www.w3.org/2000/svg">
-        <g id="A" transform="translate(-154.000000, -242.000000)" fill="currentColor" fill-rule="nonzero">
+        <g id="A" transform="translate(-154.000000, -242.000000)" fill="currentColor" fillRule="nonzero">
             <g id="Group" transform="translate(154.000000, 171.000000)">
                 <g transform="translate(0.000000, 71.000000)" id="Shape">
                         <path d="M11.1,0.6 C19.1,0.6 24.7,5.8 24.7,13.4 C24.7,20.9 19.1,26.2 10.9,26.2 L0.2,26.2 L0.2,0.7 L11.1,0.7 L11.1,0.6 Z M6.6,21 L11.2,21 C15.2,21 18,17.9 18,13.5 C18,9 15,5.9 10.9,5.9 L6.6,5.9 L6.6,21 Z"></path>
