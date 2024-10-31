@@ -7,7 +7,7 @@ import {
   BriefcaseBusiness,
   FolderGit2
 } from "lucide-react"
-import { DarkModeToggle, NavMain } from '@/elements';
+import { DarkModeToggle, NavMain, RandomThemeButton } from '@/elements';
 import {
   Sidebar,
   SidebarContent,
@@ -49,7 +49,7 @@ export default function MobileSideBar({ ...props }: React.ComponentProps<typeof 
   const { isMobile } = useSidebar();
   if(!isMobile) return null;
   return (
-    <Sidebar variant="inset" {...props}>
+    <Sidebar variant="inset" {...props} className="bg-black dark:bg-black">
       <SidebarHeader>
         <SidebarMenu>
           <SidebarMenuItem>
@@ -67,6 +67,7 @@ export default function MobileSideBar({ ...props }: React.ComponentProps<typeof 
         <NavMain items={data.navMain} />
       </SidebarContent>
       <SidebarFooter>
+        <RandomThemeButton />
         <DarkModeToggle />
       </SidebarFooter>
     </Sidebar>

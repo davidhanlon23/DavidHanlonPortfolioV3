@@ -4,10 +4,12 @@ import { useEffect, useRef } from 'react'
 import { Button } from "@/components/ui/button"
 import Link from 'next/link'
 import { useTheme } from "next-themes"
+import { useIsDarkMode } from '@/hooks'
 
 export default function AnotherHero() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const { theme } = useTheme()
+  const { isDarkMode} = useIsDarkMode();
 
   useEffect(() => {
     const canvas = canvasRef.current
@@ -69,7 +71,6 @@ export default function AnotherHero() {
     function animate() {
       if (!ctx || !canvas) return
       ctx.clearRect(0, 0, canvas.width, canvas.height)
-      const isDarkMode = theme === 'dark'
       for (const particle of particles) {
         particle.update()
         particle.draw(isDarkMode)
@@ -84,10 +85,10 @@ export default function AnotherHero() {
     return () => {
       window.removeEventListener('resize', resizeCanvas)
     }
-  }, [theme])
+  }, [isDarkMode])
 
   return (
-    <div className="relative h-screen flex items-center justify-center overflow-hidden bg-background">
+    <div className="relative h-screen flex items-center justify-center overflow-hidden bg-white dark:bg-black">
       <canvas
         ref={canvasRef}
         className="absolute inset-0 w-full h-full"
@@ -98,14 +99,14 @@ export default function AnotherHero() {
           David Hanlon
         </h1>
         <p className="text-xl sm:text-2xl md:text-3xl text-muted-foreground mb-8">
-          Senior Full Stack Software Engineer
+        Full Stack Engineer, Entrepreneur, & Blockchain Enthusiast
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <Button asChild size="lg">
             <Link href="#projects">View Projects</Link>
           </Button>
           <Button asChild variant="outline" size="lg">
-            <Link href="#contact">Contact Me</Link>
+            <Link href="#contact">Work with Me</Link>
           </Button>
         </div>
       </div>
