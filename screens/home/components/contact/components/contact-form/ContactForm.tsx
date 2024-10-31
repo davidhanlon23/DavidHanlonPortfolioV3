@@ -54,13 +54,13 @@ const ContactForm = () => {
   }
 
   return (
-    <div className="bg-gray-800 p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+    <div className="p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 bg-white dark:bg-gray-900">
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
         <motion.div variants={inputVariants} whileFocus="focus" animate="blur">
           <Input
             {...register('name')}
             placeholder="Your Name"
-            className="bg-gray-700 border-gray-600 text-gray-100 focus:ring-2 focus:ring-blue-500"
+            className=" border-gray-600 text-gray-500 dark:text-gray-100 focus:ring-2 focus:ring-blue-500"
           />
           {errors.name && (
             <p className="text-red-500 text-sm mt-1">{errors.name.message}</p>
@@ -71,7 +71,7 @@ const ContactForm = () => {
             {...register('email')}
             type="email"
             placeholder="Your Email"
-            className="bg-gray-700 border-gray-600 text-gray-100 focus:ring-2 focus:ring-blue-500"
+            className=" border-gray-600 text-gray-500 dark:text-gray-100 focus:ring-2 focus:ring-blue-500"
           />
           {errors.email && (
             <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>
@@ -81,7 +81,7 @@ const ContactForm = () => {
           <Textarea
             {...register('message')}
             placeholder="Your Message"
-            className="bg-gray-700 border-gray-600 text-gray-100 focus:ring-2 focus:ring-blue-500"
+            className=" border-gray-600  text-gray-500 dark:text-gray-100 focus:ring-2 focus:ring-blue-500"
             rows={4}
           />
           {errors.message && (
