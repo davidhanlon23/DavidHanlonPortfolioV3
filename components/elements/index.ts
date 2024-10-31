@@ -6,3 +6,4 @@ export { default as NavMain } from './app-sidebar/nav-main'
 export { default as NavSecondary } from  './app-sidebar/nav-secondary';
 export { default as NavProjects } from './app-sidebar/nav-projects';
 export { default as NavUser } from './app-sidebar/nav-user';
+export { default as RandomThemeButton } from './randomize-theme-button';

@@ -24,7 +24,7 @@ const ContactSection = () => {
             </div>
             <div>
               <h3 className="text-xl font-semibold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-orange-500">Location</h3>
-              <p className="text-gray-300">San Francisco Bay Area, CA</p>
+              <p className="text-gray-300">Miami, FL</p>
             </div>
             <div>
               <h3 className="text-xl font-semibold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-pink-400 to-red-500">Availability</h3>
