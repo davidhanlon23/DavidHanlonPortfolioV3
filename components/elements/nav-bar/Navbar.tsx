@@ -10,7 +10,7 @@ const NavBar = () => {
       <div className="flex w-full items-center justify-between">
         <div id="logo-container" className="flex-shrink-0 -mt-4">
           <Link className="flex items-center justify-center" href="/"> 
-            <Logo />
+            <Logo classes="w-36 h-36 text-primary dark:text-primary hover:text-black dark:hover:text-white" />
           </Link>
         </div>
       

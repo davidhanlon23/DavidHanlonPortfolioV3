@@ -15,7 +15,7 @@ interface ProjectCardProps {
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
     >
-      <Card className="overflow-hidden cursor-pointer" onClick={onClick}>
+      <Card className="overflow-hidden cursor-pointer bg-white dark:bg-gray-900 shadow-lg" onClick={onClick}>
         <ImageCarousel images={project.images} alt={project.title} />
         <CardContent className="p-4">
           <h3 className="text-xl font-semibold mb-2">{project.title}</h3>

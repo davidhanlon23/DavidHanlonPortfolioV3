@@ -10,8 +10,8 @@ interface ProjectModalProps {
 
 function ProjectModal({ project, onClose }: ProjectModalProps) {
   return (
-    <Dialog open={true} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-[425px]" aria-describedby="dialog-description">
+    <Dialog open={true} onOpenChange={onClose} >
+      <DialogContent className="sm:max-w-[425px] bg-white dark:bg-gray-900 shadow-lg" aria-describedby="dialog-description">
         <DialogHeader>
           <DialogTitle>{project.title}</DialogTitle>
         </DialogHeader>

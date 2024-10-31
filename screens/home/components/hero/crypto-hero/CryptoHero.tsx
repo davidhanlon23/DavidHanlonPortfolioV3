@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import Link from 'next/link'
 import { useTheme } from "next-themes"
 import { useIsDarkMode } from '@/hooks'
+import { TypeWriter } from '../../contact/components'
 
 export default function AnotherHero() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
@@ -96,7 +97,7 @@ export default function AnotherHero() {
       />
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8">
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-foreground mb-4">
-          David Hanlon
+          <TypeWriter text="David Hanlon" />
         </h1>
         <p className="text-xl sm:text-2xl md:text-3xl text-muted-foreground mb-8">
         Full Stack Engineer, Entrepreneur, & Blockchain Enthusiast
