@@ -10,14 +10,14 @@ interface ProjectModalProps {
 
 function ProjectModal({ project, onClose }: ProjectModalProps) {
   return (
-    <Dialog open={true} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-[425px]">
+    <Dialog open={true} onOpenChange={onClose} >
+      <DialogContent className="sm:max-w-[425px] bg-white dark:bg-gray-900 shadow-lg" aria-describedby="dialog-description">
         <DialogHeader>
           <DialogTitle>{project.title}</DialogTitle>
         </DialogHeader>
         <div className="grid gap-4 py-4">
           <ImageCarousel images={project.images} alt={project.title} />
-          <p className="text-muted-foreground">{project.description}</p>
+          <p id="dialog-description" className="text-muted-foreground">{project.description}</p>
           <div className="flex flex-wrap gap-2">
             {project.technologies.map((tech) => (
               <Badge key={tech} variant="secondary">{tech}</Badge>

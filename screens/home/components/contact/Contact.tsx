@@ -1,37 +1,37 @@
 'use client'
 import { motion } from 'framer-motion'
-import { SocialLinks, TypeWriter, ContactForm, ParticleBackground } from './components'
+import { SocialLinks, TypeWriter, ParticleBackground, ContactForm } from './components'
 
 const ContactSection = () => {
   return (
-    <section id="contact" className="relative bg-gray-900 text-gray-100 py-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
-      <ParticleBackground />
+    <section id="contact" className="relative bg-white dark:bg-black text-gray-100 py-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      {/* <ParticleBackground /> */}
+        <h2 className="text-4xl font-bold mb-8 text-center text-black dark:text-white">
+          <TypeWriter text="Get in Touch" />
+        </h2>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="max-w-3xl mx-auto relative z-10"
+        className="mx-auto relative z-10 flex flex-col md:flex-row md:max-w-5xl gap-8 justify-center"
       >
-        <h2 className="text-4xl font-bold mb-8 text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600">
-          <TypeWriter text="Get in Touch" />
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <ContactForm />
-          <div className="space-y-6 bg-gray-800 p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+      
+          <div className="w-full md:w-1/2 space-y-6 bg-white dark:bg-gray-900 p-8 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
             <div>
-              <h3 className="text-2xl font-semibold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500">Connect with me</h3>
+              <h3 className="text-2xl font-semibold mb-4 text-black dark:text-white">Connect with me</h3>
               <SocialLinks />
             </div>
             <div>
-              <h3 className="text-xl font-semibold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-orange-500">Location</h3>
-              <p className="text-gray-300">San Francisco Bay Area, CA</p>
+              <h3 className="text-xl font-semibold mb-2 text-black dark:text-white">Location</h3>
+              <p className="text-gray-500 dark:text-gray-300">Miami, FL</p>
             </div>
             <div>
-              <h3 className="text-xl font-semibold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-pink-400 to-red-500">Availability</h3>
-              <p className="text-gray-300">Open to new opportunities</p>
+              <h3 className="text-xl font-semibold mb-2 text-black dark:text-white">Availability</h3>
+              <p className="text-gray-500 dark:text-gray-300">Open to new opportunities</p>
             </div>
           </div>
-        </div>
+          <div className="w-full md:w-1/2"><ContactForm /></div>
+
       </motion.div>
     </section>
   )

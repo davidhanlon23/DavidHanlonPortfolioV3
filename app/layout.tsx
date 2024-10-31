@@ -21,10 +21,28 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <head />
         <body>
           <ThemeProvider
+            enableColorScheme
             attribute="class"
             defaultTheme="system"
             enableSystem
             disableTransitionOnChange
+            value={{
+              light: "light",
+              dark: "dark",
+              zinc: "theme-zinc",
+              slate: "theme-slate",
+              stone: "theme-stone",
+              gray: "theme-gray",
+              neutral: "theme-neutral",
+              red: "theme-red",
+              rose: "theme-rose",
+              orange: "theme-orange",
+              green: "theme-green",
+              blue: "theme-blue",
+              yellow: "theme-yellow",
+              violet: "theme-violet",
+            }}
+            storageKey="david-hanlon-theme"
           >
             <SidebarProvider>
               {children}

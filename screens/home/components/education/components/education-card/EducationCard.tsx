@@ -4,7 +4,7 @@ import { EducationEntry } from '@/screens/home/components/education/types';
 
 const EducationCard = ({ entry }: { entry: EducationEntry }) => {
   return (
-    <Card className="overflow-hidden">
+    <Card className="overflow-hidden bg-white dark:bg-gray-900 shadow-lg">
       <CardHeader className="pb-2">
         <div className="flex items-center gap-4">
           <Image

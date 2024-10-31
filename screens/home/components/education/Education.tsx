@@ -24,12 +24,12 @@ const educationData: EducationEntry[] = [
 
  const EducationSection = () => {
   return (
-    <section id="education" className="py-16 bg-gradient-to-b from-background to-secondary/20 dark:from-background dark:to-secondary/10">
+    <section id="education" className="py-16 bg-white dark:bg-black">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-12">Education</h2>
         <div className="relative">
           {/* Timeline */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-primary/20 dark:bg-primary/10" />
+          <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gray-300 dark:bg-gray-700" />
           
           {educationData.map((entry, index) => (
             <motion.div

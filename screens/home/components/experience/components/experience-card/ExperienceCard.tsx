@@ -20,7 +20,7 @@ const ExperienceCard = ({ experience, index }: { experience: Experience; index: 
       className={`flex ${isEven ? 'justify-end' : 'justify-start'} mb-8 w-full`}
     >
       <div className={`w-full lg:w-5/12 ${isEven ? 'lg:ml-auto' : 'lg:mr-auto'}`}>
-        <div className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+        <div className="p-4 bg-white dark:bg-gray-900 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
           <div className="flex items-center mb-2">
             {experience.logo}
             <h3 className="text-lg font-semibold ml-2">{experience.company}</h3>

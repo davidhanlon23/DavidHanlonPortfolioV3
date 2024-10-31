@@ -6,11 +6,11 @@ import MobileNavBar from './mobile-nav-bar/MobileNavBar';
 
 const NavBar = () => {
   return (
-    <header className="px-4 lg:px-6 h-14 flex items-center">
+    <header className="px-4 lg:px-6 h-14 flex items-center bg-white dark:bg-black">
       <div className="flex w-full items-center justify-between">
         <div id="logo-container" className="flex-shrink-0 -mt-4">
           <Link className="flex items-center justify-center" href="/"> 
-            <Logo />
+            <Logo classes="w-36 h-36 text-primary dark:text-primary hover:text-black dark:hover:text-white" />
           </Link>
         </div>
       
