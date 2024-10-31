@@ -1,4 +1,7 @@
 import { NavBar, Footer } from "@/elements";
+import { MobileSideBar } from "@/components/elements/nav-bar";
+import { Suspense } from "react";
+import { SidebarInset } from "@/ui";
 import "../globals.css";
 
 export default function LoggedOutLayout({
@@ -8,9 +11,16 @@ export default function LoggedOutLayout({
 }>) {
   return (
     <>
-        <NavBar/>
+   <MobileSideBar />
+    <SidebarInset>
+      <Suspense fallback={<div className="h-14" />}>
+        <NavBar />
+      </Suspense>
+      <main className="min-h-screen">
         {children}
-        <Footer />
-      </>
+      </main>
+      <Footer />
+    </SidebarInset> 
+    </>
   );
 }

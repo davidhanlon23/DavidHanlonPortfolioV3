@@ -1,15 +1,15 @@
 "use client"
-import { Testimonials, LiveHero, Education, Experience, Projects, Contact } from './components';
+import { LiveHero,DefaultHero, Education, Experience, Projects, Contact } from './components';
 
 const Home = () => {
     return(
             <div className="flex flex-col min-h-screen">
-              <LiveHero />
+              {/* <LiveHero /> */}
+              <DefaultHero />
               <Projects />
               <Experience />
               <Education />
               <Contact />
-              <Testimonials />
           </div>
     );
 };
