@@ -1,5 +1,5 @@
 "use client"
-import { Testimonials, LiveHero, Education, Experience, Projects, Contact } from './components';
+import { LiveHero, Education, Experience, Projects, Contact } from './components';
 
 const Home = () => {
     return(
@@ -9,7 +9,6 @@ const Home = () => {
               <Experience />
               <Education />
               <Contact />
-              <Testimonials />
           </div>
     );
 };
