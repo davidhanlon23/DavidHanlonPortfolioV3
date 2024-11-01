@@ -2,9 +2,14 @@ import { Button, Tooltip, TooltipTrigger, TooltipContent, TooltipProvider } from
 import { FaUserNinja } from "react-icons/fa";
 import { useGlobal } from "@/components/providers/global-provider/global-provider";
 import { TooltipArrow } from "@radix-ui/react-tooltip";
-
+import { useTheme } from "next-themes";
 const HackerModeButton = () => {
     const { view, setView } = useGlobal();
+    const { setTheme } = useTheme();
+    const switchView = () => {
+        setTheme('dark');
+        setView('hacker');
+    };
     return (
         <TooltipProvider>
             <Tooltip>
@@ -12,7 +17,7 @@ const HackerModeButton = () => {
                     <Button 
                         size="icon" 
                         aria-label="Click to activate Hacker Mode" 
-                        onClick={() => setView('hacker')} 
+                        onClick={switchView} 
                         className="animate-bounce"
                     >
                         <FaUserNinja />
