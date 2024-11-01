@@ -69,8 +69,8 @@ const InteractiveTerminal = () => {
   }
 
   return (
-    <div className="bg-black text-green-400 p-4 rounded-lg font-mono w-full max-w-2xl">
-      <ScrollArea className="h-64" ref={scrollAreaRef}>
+    <div className="bg-black text-green-400 p-4 font-mono fixed inset-0">
+      <ScrollArea className="h-[calc(100vh-80px)]" ref={scrollAreaRef}>
         {history.map((entry, index) => (
           <div key={index}>
             <div className="text-yellow-400">$ {entry.command}</div>
@@ -85,7 +85,7 @@ const InteractiveTerminal = () => {
           value={currentCommand}
           onChange={(e) => setCurrentCommand(e.target.value)}
           onKeyDown={handleCommand}
-          className="bg-transparent border-none text-green-400 focus:ring-0"
+          className="bg-transparent border-none text-green-400 focus:ring-0 w-full"
           placeholder="Type a command..."
         />
       </div>
