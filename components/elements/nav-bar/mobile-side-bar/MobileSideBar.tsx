@@ -45,7 +45,7 @@ const data = {
   ],
 }
 
-export default function MobileSideBar({ ...props }: React.ComponentProps<typeof Sidebar>) {
+const MobileSideBar = ({ ...props }: React.ComponentProps<typeof Sidebar>) => {
   const { isMobile } = useSidebar();
   if(!isMobile) return null;
   return (
@@ -74,3 +74,5 @@ export default function MobileSideBar({ ...props }: React.ComponentProps<typeof 
     </Sidebar>
   )
 }
+
+export default MobileSideBar;

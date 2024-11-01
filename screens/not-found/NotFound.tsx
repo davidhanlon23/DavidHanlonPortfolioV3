@@ -3,7 +3,7 @@ import { Button, Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/
 import { TrendingUp, Home, Search, HelpCircle } from 'lucide-react'
 import {NavBar, Footer } from '@/elements'
 
-export default function NotFound() {
+const NotFound = () => {
   return (
     <>
         <NavBar />
@@ -56,3 +56,5 @@ export default function NotFound() {
 
   )
 }
+
+export default NotFound;  

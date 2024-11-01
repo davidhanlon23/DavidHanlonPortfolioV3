@@ -148,7 +148,7 @@ const data = {
   ],
 }
 
-export default function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
+const AppSidebar = ({ ...props }: React.ComponentProps<typeof Sidebar>) => {
   return (
     <Sidebar variant="inset" {...props}>
       <SidebarHeader>
@@ -179,3 +179,5 @@ export default function AppSidebar({ ...props }: React.ComponentProps<typeof Sid
     </Sidebar>
   )
 }
+
+export default AppSidebar;

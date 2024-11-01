@@ -11,7 +11,7 @@ interface Star {
   pz: number
 }
 
-export default function LiveHero() {
+const LiveHero = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 })
   const { isDarkMode } = useIsDarkMode();
@@ -114,3 +114,5 @@ export default function LiveHero() {
     </section>
   )
 }
+
+export default LiveHero;
