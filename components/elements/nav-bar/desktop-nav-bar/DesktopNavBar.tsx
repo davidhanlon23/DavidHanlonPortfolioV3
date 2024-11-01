@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { DarkModeToggle, RandomThemeButton } from '@/elements';
+import { DarkModeToggle, HackerModeButton, RandomThemeButton } from '@/elements';
 
 const DesktopNavBar = () => {
     return(
@@ -17,6 +17,7 @@ const DesktopNavBar = () => {
             Contact
           </Link>
           <DarkModeToggle />
+          <HackerModeButton />
           <RandomThemeButton />
         </nav> 
     );
