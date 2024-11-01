@@ -1,3 +1,4 @@
+"use client"
 import {
   Dialog,
   DialogContent,
@@ -6,6 +7,7 @@ import {
 } from "@/ui";
 import { InteractiveTerminal } from "@/elements";
 import { useGlobal } from "@/components/providers/global-provider/global-provider";
+import { motion } from "framer-motion";
 
 const HackerView = () => {
   const { setView } = useGlobal();
@@ -19,13 +21,23 @@ const HackerView = () => {
         }
       }}
     >
-      <DialogContent className="max-w-full h-screen flex flex-col p-0 gap-0">
-        <DialogHeader className="px-4 py-2">
-          <DialogTitle>Hacker View</DialogTitle>
-        </DialogHeader>
-        <div className="flex-1 p-4">
-            <InteractiveTerminal />
-        </div>
+      <DialogContent className="max-w-full h-screen flex flex-col p-0 gap-0 bg-black">
+        <motion.div
+          className="flex flex-col h-full"
+          initial={{ y: "100%" }}
+          animate={{ y: 0 }}
+          exit={{ y: "100%" }}
+          transition={{ 
+            type: "spring",
+            damping: 30,
+            stiffness: 300,
+          }}
+        >
+            <div className="flex-1 p-4">
+                <InteractiveTerminal />
+            </div> 
+            <div>Ho</div>
+        </motion.div>
       </DialogContent>
     </Dialog>
   );
