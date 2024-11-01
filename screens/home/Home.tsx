@@ -1,14 +1,21 @@
 "use client"
-import { CryptoHero, Education, Experience, Projects, Contact } from './components';
+import { useGlobal } from '@/components/providers/global-provider/global-provider';
+import { DefaultView, HackerView } from './views';
 
 const Home = () => {
+    const { view } = useGlobal();
+
+    const renderContent = () => {
+        switch(view) {
+            case 'default':
+                return <DefaultView />;
+            case 'hacker':
+                return <HackerView />;
+        }
+    };
     return(
             <div className="flex flex-col min-h-screen">
-              <CryptoHero />
-              <Projects />
-              <Experience />
-              <Education />
-              <Contact />
+                {renderContent()}
           </div>
     );
 };
