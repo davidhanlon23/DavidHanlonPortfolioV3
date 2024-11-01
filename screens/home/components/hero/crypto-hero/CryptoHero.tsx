@@ -106,7 +106,7 @@ export default function AnotherHero() {
           <Button asChild size="lg">
             <Link href="#projects">View Projects</Link>
           </Button>
-          <Button asChild variant="outline" size="lg">
+          <Button asChild variant="outline" size="lg" color="primary">
             <Link href="#contact">Work with Me</Link>
           </Button>
         </div>

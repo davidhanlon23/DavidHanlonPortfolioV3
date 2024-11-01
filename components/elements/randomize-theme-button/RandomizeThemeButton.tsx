@@ -1,6 +1,7 @@
 "use client"
 import { useState, useEffect } from "react"
 import { useTheme } from "next-themes"
+import { TooltipArrow } from "@radix-ui/react-tooltip"
 import { Button, Tooltip, TooltipTrigger, TooltipContent, TooltipProvider } from "@/ui"
 import { Paintbrush } from "lucide-react"
 
@@ -60,6 +61,7 @@ export default function RandomThemeButton() {
         </Button>      
         </TooltipTrigger>
         <TooltipContent>
+          <TooltipArrow className="fill-primary" />
           <p>Randomize Theme</p>
         </TooltipContent>
       </Tooltip>

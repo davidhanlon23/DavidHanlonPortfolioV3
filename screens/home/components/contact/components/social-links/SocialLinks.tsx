@@ -31,7 +31,7 @@ const SocialLinks = () => {
         variants={socialLinkVariants}
         whileHover="hover"
         whileTap="tap"
-        className="text-gray-400 hover:text-white"
+        className="text-gray-400 hover:text-gray-900 dark:hover:text-white flex items-center"
       >
         <Github size={28} />
         <span className="sr-only">GitHub</span>
@@ -43,7 +43,7 @@ const SocialLinks = () => {
         variants={socialLinkVariants}
         whileHover="hover"
         whileTap="tap"
-        className="text-gray-400 hover:text-white"
+        className="text-gray-400 hover:text-gray-900 dark:hover:text-white flex items-center"
       >
         <Linkedin size={28} />
         <span className="sr-only">LinkedIn</span>
@@ -53,7 +53,7 @@ const SocialLinks = () => {
         variants={socialLinkVariants}
         whileHover="hover"
         whileTap="tap"
-        className="text-gray-400 hover:text-white flex items-center"
+        className="text-gray-400 hover:text-gray-900 dark:hover:text-white flex items-center"
       >
         <FileUser size={28} className="mr-2" />
         <span className="sr-only">View Resume</span>
@@ -63,7 +63,7 @@ const SocialLinks = () => {
         variants={socialLinkVariants}
         whileHover="hover"
         whileTap="tap"
-        className="text-gray-400 hover:text-white flex items-center"
+        className="text-gray-400 hover:text-gray-900 dark:hover:text-white flex items-center"
       >
         <Mail size={28} className="mr-2" />
         <span className="sr-only">Copy Email</span>
