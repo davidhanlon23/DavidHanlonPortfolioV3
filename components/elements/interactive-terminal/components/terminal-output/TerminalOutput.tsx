@@ -9,14 +9,15 @@ interface TerminalOutputProps {
 
 const TerminalOutput: FC<TerminalOutputProps> = ({ entry }) => {
   return (
-    <div className="mb-2">
-      <div className={entry.isChatMode ? "text-blue-400" : "text-yellow-400"}>
-        {entry.isChatMode ? "You: " : "$ "}{entry.command}
+    <div className="mb-2 max-w-full">
+      <div className={`${entry.isChatMode ? "text-blue-400" : "text-yellow-400"} break-words`}>
+        <span className="flex-shrink-0">{entry.isChatMode ? "You: " : "$ "}</span>
+        {entry.command}
       </div>
       {entry.isTyping ? (
         <TypingEffect text={entry.output} speed={TYPING_SPEED} />
       ) : (
-        <pre className={entry.isAsciiArt ? 'whitespace-pre' : 'whitespace-pre-wrap'}>
+        <pre className={`${entry.isAsciiArt ? 'whitespace-pre overflow-x-auto' : 'whitespace-pre-wrap break-words'} max-w-full`}>
           {entry.output}
         </pre>
       )}

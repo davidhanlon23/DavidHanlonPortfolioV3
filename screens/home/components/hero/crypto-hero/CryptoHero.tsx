@@ -3,14 +3,12 @@
 import { useEffect, useRef } from 'react'
 import { Button } from "@/components/ui/button"
 import Link from 'next/link'
-import { useTheme } from "next-themes"
 import { useIsDarkMode } from '@/hooks'
 import { TypeWriter } from '../../contact/components'
 import { useGlobal } from '@/components/providers/global-provider/global-provider';
 
-export default function AnotherHero() {
+const CryptoHero = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null)
-  const { theme } = useTheme()
   const { isDarkMode} = useIsDarkMode();
   const { view } = useGlobal();
 
@@ -116,3 +114,5 @@ export default function AnotherHero() {
     </div>
   )
 }
+
+export default CryptoHero;

@@ -20,7 +20,7 @@ const themes = [
   "violet",
 ]
 
-export default function RandomThemeButton() {
+const RandomThemeButton = () => {
   const { setTheme } = useTheme()
   const [isAnimating, setIsAnimating] = useState(false)
 
@@ -69,3 +69,5 @@ export default function RandomThemeButton() {
     
   )
 }
+
+export default RandomThemeButton;
