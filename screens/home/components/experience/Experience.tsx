@@ -79,33 +79,20 @@ const ExperienceSection = () => {
       return () => window.removeEventListener('scroll', handleScroll)
     }, [])
     return(
-        <section id="experience" className="bg-gray-100 dark:bg-black">
-            <div className=" py-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white text-center mb-12">
-            Career Journey
-        </h2>
-        <div ref={timelineRef} className="relative">
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gray-300 dark:bg-gray-700" />
-          {experiences.map((exp, index) => (
-            <ExperienceCard key={index} experience={exp} index={index} />
-          ))}
-          {/* <AnimatePresence>
-            {activeIndex !== null && (
-              <motion.div
-                key={activeIndex}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.3 }}
-                className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary rounded-full"
-                style={{ top: `${(activeIndex / (experiences.length - 1)) * 100}%` }}
-              />
-            )}
-          </AnimatePresence> */}
-        </div>
-      </div>
-    </div>
+        <section id="experience" className="bg-gray-100 dark:bg-black relative overflow-hidden">
+            <div className="py-16 px-4 sm:px-6 lg:px-8">
+                <div className="max-w-7xl mx-auto">
+                    <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white text-center mb-12">
+                        Career Journey
+                    </h2>
+                    <div ref={timelineRef} className="relative min-h-[500px]">
+                        <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gray-300 dark:bg-gray-700" />
+                        {experiences.map((exp, index) => (
+                            <ExperienceCard key={index} experience={exp} index={index} />
+                        ))}
+                    </div>
+                </div>
+            </div>
         </section>
     );
 };
