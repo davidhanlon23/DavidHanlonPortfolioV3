@@ -18,7 +18,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <>
       <html lang="en" suppressHydrationWarning>
-        <head />
+        <head>
+          <meta name="google-site-verification" content="8I7pQhdRQJJMjGxjer8DutuV-GZv1vQU9lTgergLCVY" />
+        </head>
         <body>
           <ThemeProvider
             enableColorScheme
