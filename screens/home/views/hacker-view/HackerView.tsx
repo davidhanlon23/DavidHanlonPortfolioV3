@@ -22,9 +22,12 @@ const HackerView = () => {
       }}
     >   
       <DialogTitle id="hacker-view-title" className="sr-only">Hacker View</DialogTitle>
-      <DialogContent className="max-w-full h-screen flex flex-col p-0 gap-0 bg-black" aria-describedby="hacker-view-title">
+      <DialogContent 
+        className="max-w-full min-h-[100dvh] h-[100dvh] flex flex-col p-0 gap-0 bg-black overflow-hidden" 
+        aria-describedby="hacker-view-title"
+      >
         <motion.div
-          className="flex flex-col h-full"
+          className="flex flex-col h-full w-full"
           initial={{ y: "100%" }}
           animate={{ y: 0 }}
           exit={{ y: "100%" }}
@@ -34,10 +37,9 @@ const HackerView = () => {
             stiffness: 300,
           }}
         >
-            <div className="flex-1 p-4">
+            <div className="flex-1 p-4 overflow-y-auto">
                 <InteractiveTerminal />
-            </div> 
-            <div>Ho</div>
+            </div>
         </motion.div>
       </DialogContent>
     </Dialog>
