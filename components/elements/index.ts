@@ -7,3 +7,5 @@ export { default as NavSecondary } from  './app-sidebar/nav-secondary';
 export { default as NavProjects } from './app-sidebar/nav-projects';
 export { default as NavUser } from './app-sidebar/nav-user';
 export { default as RandomThemeButton } from './randomize-theme-button';
+export { default as InteractiveTerminal } from './interactive-terminal';
+export { default as HackerModeButton } from './hacker-mode-button';

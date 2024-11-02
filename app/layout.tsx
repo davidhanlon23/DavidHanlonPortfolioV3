@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from '@/components/providers';
+import { ThemeProvider, GlobalProvider } from '@/components/providers';
 import { Toaster } from '@/ui';
 import { RootLayoutProps } from "./_types";
 import { SidebarProvider } from "@/ui";
@@ -45,7 +45,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
             storageKey="david-hanlon-theme"
           >
             <SidebarProvider>
-              {children}
+              <GlobalProvider>
+                {children}
+              </GlobalProvider>
             </SidebarProvider>
           </ThemeProvider>
           <Toaster />

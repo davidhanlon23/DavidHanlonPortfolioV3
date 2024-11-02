@@ -10,6 +10,8 @@ export * from './dialog';
 export * from './dropdown-menu';
 export * from './image-carousel';
 export * from './input';
+export * from './label';
+export * from './scroll-area';
 export * from './separator';
 export * from './sheet';
 export * from './sidebar';

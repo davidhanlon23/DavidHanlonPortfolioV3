@@ -7,7 +7,7 @@ import {
   BriefcaseBusiness,
   FolderGit2
 } from "lucide-react"
-import { DarkModeToggle, NavMain, RandomThemeButton } from '@/elements';
+import { DarkModeToggle, HackerModeButton, NavMain, RandomThemeButton } from '@/elements';
 import {
   Sidebar,
   SidebarContent,
@@ -67,6 +67,7 @@ export default function MobileSideBar({ ...props }: React.ComponentProps<typeof 
         <NavMain items={data.navMain} />
       </SidebarContent>
       <SidebarFooter>
+        <HackerModeButton />
         <RandomThemeButton />
         <DarkModeToggle />
       </SidebarFooter>
