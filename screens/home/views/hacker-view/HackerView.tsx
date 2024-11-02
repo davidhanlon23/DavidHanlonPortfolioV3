@@ -20,8 +20,9 @@ const HackerView = () => {
           setView('default');
         }
       }}
-    >
-      <DialogContent className="max-w-full h-screen flex flex-col p-0 gap-0 bg-black">
+    >   
+      <DialogTitle id="hacker-view-title" className="sr-only">Hacker View</DialogTitle>
+      <DialogContent className="max-w-full h-screen flex flex-col p-0 gap-0 bg-black" aria-describedby="hacker-view-title">
         <motion.div
           className="flex flex-col h-full"
           initial={{ y: "100%" }}

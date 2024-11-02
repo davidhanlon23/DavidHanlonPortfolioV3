@@ -14,5 +14,4 @@ pnpm dev
 bun dev
 ```
 ## TODO:
-- add ShadCN as UI frameworks
-- look into next15 early release canidate
+- look into next15 early release candidate
