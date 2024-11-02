@@ -89,10 +89,32 @@ const  InteractiveTerminal = () => {
             type="text"
             value={currentCommand}
             onChange={(e) => setCurrentCommand(e.target.value)}
-            onKeyDown={(e) => e.key === 'Enter' && handleCommand(currentCommand)}
-            className="flex-grow bg-transparent border-none focus:ring-0 text-green-400 min-w-0"
+            onKeyDown={(e) => {
+              if (e.key === 'Enter') {
+                handleCommand(currentCommand)
+                /* Blur input on mobile after sending to hide keyboard */
+                if (window.innerWidth <= 768) {
+                  inputRef.current?.blur()
+                }
+              }
+            }}
+            onClick={() => {
+              /* Scroll to bottom when focusing input on mobile */
+              if (scrollAreaRef.current) {
+                setTimeout(() => {
+                  scrollAreaRef.current?.scrollTo({
+                    top: scrollAreaRef.current.scrollHeight,
+                    behavior: 'smooth'
+                  });
+                }, 100);
+              }
+            }}
+            className="flex-grow bg-transparent border-none focus:ring-0 text-green-400 min-w-0 p-2 text-base md:text-sm"
             placeholder={isChatMode ? "Ask a question..." : "Type a command..."}
             ref={inputRef}
+            autoComplete="off"
+            autoCapitalize="off"
+            spellCheck="false"
           />
         </div>
       </div>
