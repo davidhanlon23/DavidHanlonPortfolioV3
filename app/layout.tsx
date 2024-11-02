@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     absolute: '',
     template: `%s | David M. Hanlon`
   },
+  metadataBase: new URL('https://davidmhanlon.com'),
 };
 
 export default function RootLayout({ children }: RootLayoutProps) {
