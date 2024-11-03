@@ -1,28 +1,9 @@
 'use client'
 import { motion } from 'framer-motion'
 import { EducationCard } from './components';
-import { EducationEntry } from '@/screens/home/components/education/types';
+import { EDUCATION_DATA } from './constants';
 
-const educationData: EducationEntry[] = [
-  {
-    institution: "Stanford University",
-    logo: "/placeholder.svg?height=80&width=80",
-    degree: "Master of Science in Computer Science",
-    years: "2018 - 2020",
-    gpa: "3.9",
-    achievements: ["Specialization in Artificial Intelligence", "Published 2 research papers"]
-  },
-  {
-    institution: "University of California, Berkeley",
-    logo: "/placeholder.svg?height=80&width=80",
-    degree: "Bachelor of Science in Computer Science",
-    years: "2014 - 2018",
-    gpa: "3.8",
-    achievements: ["Dean's List all semesters", "Graduated with Honors"]
-  }
-]
-
- const EducationSection = () => {
+const EducationSection = () => {
   return (
     <section id="education" className="py-16 bg-white dark:bg-black">
       <div className="container mx-auto px-4">
@@ -31,7 +12,7 @@ const educationData: EducationEntry[] = [
           {/* Timeline */}
           <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gray-300 dark:bg-gray-700" />
           
-          {educationData.map((entry, index) => (
+          {EDUCATION_DATA.map((entry, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 50 }}

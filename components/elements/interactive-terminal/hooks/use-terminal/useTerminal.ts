@@ -1,10 +1,12 @@
 import { useState, useCallback } from 'react'
 import { CommandOutput, Theme } from '../../types'
 import { getSkillInfo, generateResume, getChatResponse } from '../../utils'
-import { CONTACT_INFO } from '@/screens/home/constants';
+import { CONTACT_INFO } from '@/screens/home/components/contact/constants';
 import { THERE_IS_NO_SPOON, WELCOME_MESSAGE, TRUE_IDENTITY, KONAMI_CODE } from './util';
 
 import { useGlobal } from '@/components/providers/global-provider/global-provider';
+import { ABOUT_DATA } from '@/screens/home/components/about/constants';
+
 const useTerminal = () => {
   const { setView } = useGlobal();
   const [history, setHistory] = useState<CommandOutput[]>([])
@@ -57,12 +59,11 @@ const useTerminal = () => {
           }`
           break
         case 'about':
-          output = `${CONTACT_INFO['about']}`
+          output = `${ABOUT_DATA['about']}`
           isTyping = true
           break
-        /** @TODO - update skills */
         case 'skills':
-          output = 'My skills include: TypeScript, React, Next.js, Node.js, Python, and more. Type "skills <skill>" for more info.'
+          output = `My skills include: ${ABOUT_DATA['skills'].join(', ')} and more. Type "skills <skill>" for more info.`
           break
         /** @TODO - update projects */
         case 'projects':

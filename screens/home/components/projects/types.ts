@@ -7,4 +7,6 @@ export interface Project {
     githubUrl: string
     liveUrl: string
     images: string[];
+    type: ProjectType;
   }
+  type ProjectType = 'side-project' | 'personal-project' | 'work-project';

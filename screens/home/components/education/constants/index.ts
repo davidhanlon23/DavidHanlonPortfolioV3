@@ -1,0 +1,1 @@
+export { EDUCATION_DATA } from './education.constants';

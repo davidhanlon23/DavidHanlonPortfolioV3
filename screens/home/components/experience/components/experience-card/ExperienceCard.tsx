@@ -2,6 +2,7 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { Experience } from '@/screens/home/components/experience/types';
+import { Avatar, AvatarFallback, AvatarImage } from '@/ui';
 
 const ExperienceCard = ({ experience, index }: { experience: Experience; index: number }) => {
   const [ref, inView] = useInView({
@@ -10,7 +11,7 @@ const ExperienceCard = ({ experience, index }: { experience: Experience; index: 
   })
 
   const isEven = index % 2 === 0
-
+  const isLogoString = typeof experience.logo === 'string';
   return (
     <motion.div
       ref={ref}
@@ -22,7 +23,12 @@ const ExperienceCard = ({ experience, index }: { experience: Experience; index: 
       <div className={`w-full lg:w-5/12 ${isEven ? 'lg:ml-auto' : 'lg:mr-auto'}`}>
         <div className="p-4 bg-white dark:bg-gray-900 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
           <div className="flex items-center mb-2">
-            {experience.logo}
+            {isLogoString ? (
+              <Avatar className="h-10 w-10 rounded-lg">
+                <AvatarImage src={experience.logo as string} alt={experience.company} />
+                <AvatarFallback className="rounded-lg">CN</AvatarFallback>
+            </Avatar>
+          ) : experience.logo}
             <h3 className="text-lg font-semibold ml-2">{experience.company}</h3>
           </div>
           <h4 className="text-md font-medium text-gray-600 dark:text-gray-300">{experience.title}</h4>

@@ -1,12 +1,13 @@
-import { CryptoHero, Projects, Experience, Education, Contact } from '../../components';
+import { CryptoHero, Projects, Experience, Education, Contact, About } from '../../components';
 
 const DefaultView = () => {
     return (
         <>
             <CryptoHero />
-            <Projects />
+            <About />
             <Experience />
             <Education />
+            <Projects />
             <Contact /> 
         </>
     );
