@@ -5,6 +5,9 @@ import { ThemeProvider, GlobalProvider } from '@/components/providers';
 import { Toaster } from '@/ui';
 import { RootLayoutProps } from "./_types";
 import { SidebarProvider } from "@/ui";
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+
+const queryClient = new QueryClient()
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -23,6 +26,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
           <meta name="google-site-verification" content="8I7pQhdRQJJMjGxjer8DutuV-GZv1vQU9lTgergLCVY" />
         </head>
         <body>
+        <QueryClientProvider client={queryClient}>
+
           <ThemeProvider
             enableColorScheme
             attribute="class"
@@ -52,7 +57,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
                 {children}
               </GlobalProvider>
             </SidebarProvider>
-          </ThemeProvider>
+            </ThemeProvider>
+          </QueryClientProvider>
           <Toaster />
         </body>
       </html>

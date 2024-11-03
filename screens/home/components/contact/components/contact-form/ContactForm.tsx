@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { motion, useAnimation } from 'framer-motion'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
+import { useMutation } from '@tanstack/react-query'
 import * as z from 'zod'
 import { Textarea, Input, Button } from '@/ui'
 import { useToast } from '@/hooks'
@@ -23,7 +24,6 @@ const inputVariants = {
 }
 
 const ContactForm = () => {
-  const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSuccess, setIsSuccess] = useState(false)
   const { toast } = useToast()
   const controls = useAnimation()
@@ -36,21 +36,45 @@ const ContactForm = () => {
     resolver: zodResolver(formSchema),
   })
 
-  const onSubmit = async (data: FormData) => {
-    setIsSubmitting(true)
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 2000))
-    setIsSubmitting(false)
-    setIsSuccess(true)
-    reset()
-    toast({
-      title: 'Message sent!',
-      description: "Thanks for reaching out. I'll get back to you soon.",
-    })
-    controls.start({
-      scale: [1, 1.1, 1],
-      transition: { duration: 0.5 },
-    })
+  const mutation = useMutation({
+    mutationFn: async (data: FormData) => {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      })
+
+      if (!response.ok) {
+        throw new Error('Failed to send message')
+      }
+
+      return response.json()
+    },
+    onSuccess: () => {
+      setIsSuccess(true)
+      reset()
+      toast({
+        title: 'Message sent!',
+        description: "Thanks for reaching out. I'll get back to you soon.",
+      })
+      controls.start({
+        scale: [1, 1.1, 1],
+        transition: { duration: 0.5 },
+      })
+    },
+    onError: (error) => {
+      toast({
+        title: 'Error',
+        description: error instanceof Error ? error.message : 'Something went wrong',
+        variant: 'destructive',
+      })
+    },
+  })
+
+  const onSubmit = (data: FormData) => {
+    mutation.mutate(data)
   }
 
   return (
@@ -60,7 +84,7 @@ const ContactForm = () => {
           <Input
             {...register('name')}
             placeholder="Your Name"
-            className=" border-gray-600 text-gray-500 dark:text-gray-100 focus:ring-2 focus:ring-blue-500"
+            className="border-gray-600 text-gray-500 dark:text-gray-100 focus:ring-2 focus:ring-blue-500"
           />
           {errors.name && (
             <p className="text-red-500 text-sm mt-1">{errors.name.message}</p>
@@ -71,7 +95,7 @@ const ContactForm = () => {
             {...register('email')}
             type="email"
             placeholder="Your Email"
-            className=" border-gray-600 text-gray-500 dark:text-gray-100 focus:ring-2 focus:ring-blue-500"
+            className="border-gray-600 text-gray-500 dark:text-gray-100 focus:ring-2 focus:ring-blue-500"
           />
           {errors.email && (
             <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>
@@ -81,7 +105,7 @@ const ContactForm = () => {
           <Textarea
             {...register('message')}
             placeholder="Your Message"
-            className=" border-gray-600  text-gray-500 dark:text-gray-100 focus:ring-2 focus:ring-blue-500"
+            className="border-gray-600 text-gray-500 dark:text-gray-100 focus:ring-2 focus:ring-blue-500"
             rows={4}
           />
           {errors.message && (
@@ -101,10 +125,10 @@ const ContactForm = () => {
         >
           <Button
             type="submit"
-            disabled={isSubmitting}
+            disabled={mutation.isPending}
             className="w-full bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-primary text-white font-bold py-2 px-4 rounded-full transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
           >
-            {isSubmitting ? 'Sending...' : 'Send Message'}
+            {mutation.isPending ? 'Sending...' : 'Send Message'}
           </Button>
         </motion.div>
       </form>
@@ -126,4 +150,5 @@ const ContactForm = () => {
     </div>
   )
 }
-export default ContactForm;
+
+export default ContactForm
