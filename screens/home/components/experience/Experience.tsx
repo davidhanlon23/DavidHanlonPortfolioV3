@@ -28,7 +28,7 @@ const ExperienceSection = () => {
       return () => window.removeEventListener('scroll', handleScroll)
     }, [])
     return(
-        <section id="experience" className="bg-gray-100 dark:bg-black relative overflow-hidden">
+        <section id="experience" className="bg-white dark:bg-black relative overflow-hidden">
             <div className="py-16 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto">
                     <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white text-center mb-12">

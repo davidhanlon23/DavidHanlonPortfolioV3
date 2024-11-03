@@ -62,9 +62,8 @@ const useTerminal = () => {
           output = `${ABOUT_DATA['about']}`
           isTyping = true
           break
-        /** @TODO - update skills */
         case 'skills':
-          output = 'My skills include: TypeScript, React, Next.js, Node.js, Python, and more. Type "skills <skill>" for more info.'
+          output = `My skills include: ${ABOUT_DATA['skills'].join(', ')} and more. Type "skills <skill>" for more info.`
           break
         /** @TODO - update projects */
         case 'projects':

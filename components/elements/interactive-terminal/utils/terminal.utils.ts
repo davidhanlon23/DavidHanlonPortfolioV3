@@ -62,6 +62,7 @@ Skills:
 - Frontend: React, Next.js, React Native, Expo, Ionic Framework
 - Backend: Node.js, Express, Nest.js
 - Databases: PostgreSQL, NoSQL, MongoDB, PrismaORM
+- Web3: Solidity, Rainbow Kit,  Ganache, Hard Hat, Open Zeppelin
 - Infrastructure: Docker, Render, Vercel
 - Cloud: AWS
 

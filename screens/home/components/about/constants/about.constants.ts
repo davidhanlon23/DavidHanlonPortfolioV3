@@ -1,6 +1,6 @@
 export const ABOUT_DATA = {
     professionalSummary: `Senior Software Engineer with over half a decade of frontend development experience, I specialize in building scalable, user-centric solutions within hyper-growth startup environments. Proven ability to drive rapid innovation and deliver high-impact features that enhance performance and user engagement.`,
-    avatarUrl: "/placeholder.svg",
+    avatarUrl: "/Images/davidHanlon.jpg",
     skills: [
         // Front End
         'React',
@@ -60,7 +60,7 @@ export const ABOUT_DATA = {
     currentFocus: `
     I'm currently diving deep into serverless architectures and exploring the potential of AI in web development. 
                   Always looking to connect with like-minded professionals and innovative companies pushing the boundaries of what's possible in tech.`,
-    /** @TODOD */
+    /** @TODO */
     hobbies: `
                    When I'm not coding, you can find me exploring the latest tech trends, contributing to open-source projects, 
                   or enjoying a good cup of coffee while brainstorming my next big idea. I believe in the power of technology 
