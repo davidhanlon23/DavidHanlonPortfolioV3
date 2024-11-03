@@ -1,0 +1,1 @@
+export { ABOUT_DATA } from './about.constants';

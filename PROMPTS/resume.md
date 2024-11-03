@@ -34,6 +34,8 @@ Electronic Transaction Systems, Berlin, MD — Software Engineering Intern
 June 2017 - August 2017
 Utilized  Sketch, and InVision in order to create UI/UX prototypes
 Fixed bugs on the company’s website, and EMoney virtual wallet mobile application to improve user experience
+
+
 SKILLS
 FRONT END: React, TypeScript, HTML/CSS, Material UI (MUI), Tailwind, ShadCN, ChakraUI
 Web 3: Solidity, Ganache, Rainbow Kit, Alchemy, IPFS, Hard Hat, Open Zeppelin
