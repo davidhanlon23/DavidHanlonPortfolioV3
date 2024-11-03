@@ -15,3 +15,6 @@ bun dev
 ```
 ## TODO:
 - look into next15 early release candidate
+- update todos
+- add react-email
+- add api route for resend
