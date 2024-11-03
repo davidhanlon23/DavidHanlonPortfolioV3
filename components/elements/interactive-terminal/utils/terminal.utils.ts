@@ -17,7 +17,7 @@ export const getThemeStyles = (theme: Theme, isRedPillMode: boolean, isDejaVu: b
   }
   return `${baseStyles} ${isRedPillMode ? 'invert' : ''} ${isDejaVu ? 'animate-pulse' : ''}`
 }
-
+/** @TODO - update Skills */
 export const getSkillInfo = (skill: string, isNeoVision: boolean): string => {
   const normalSkillInfo: { [key: string]: string } = {
     nodejs: 'Node.js: 10 years of experience, building scalable backend services',
@@ -42,7 +42,7 @@ export const getSkillInfo = (skill: string, isNeoVision: boolean): string => {
   const skillInfo = isNeoVision ? matrixSkillInfo : normalSkillInfo
   return skillInfo[skill] || `No detailed info available for ${skill}`
 }
-
+/** @TODO - update Skills */
 export const generateResume = (): string => {
   return `
 David Hanlon
