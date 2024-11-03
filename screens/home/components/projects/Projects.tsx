@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { ProjectCard, ProjectModal } from './components'
 import { Project } from './types'
-import { PROJECTS } from '../../constants/projects.contstants'
+import { PROJECT_DATA } from './constants'
 
 export function ProjectsSection() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null)
@@ -19,7 +19,7 @@ export function ProjectsSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, staggerChildren: 0.1 }}
         >
-          {PROJECTS.map((project) => (
+          {PROJECT_DATA.map((project) => (
             <ProjectCard
               key={project.id}
               project={project}

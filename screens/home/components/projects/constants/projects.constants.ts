@@ -1,6 +1,6 @@
 import { Project } from "../components/projects/types";
 
-export const PROJECTS: Project[] = [
+export const PROJECT_DATA: Project[] = [
   {
     id: 1,
     title: 'Stellr',

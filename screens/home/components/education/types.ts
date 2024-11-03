@@ -5,5 +5,6 @@ export interface EducationEntry {
     years: string
     gpa: string
     achievements: string[]
+    url: string;
   }
   

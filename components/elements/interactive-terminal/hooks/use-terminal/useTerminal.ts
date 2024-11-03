@@ -1,7 +1,7 @@
 import { useState, useCallback } from 'react'
 import { CommandOutput, Theme } from '../../types'
 import { getSkillInfo, generateResume, getChatResponse } from '../../utils'
-import { CONTACT_INFO } from '@/screens/home/constants';
+import { CONTACT_INFO } from '@/screens/home/components/contact/constants';
 import { THERE_IS_NO_SPOON, WELCOME_MESSAGE, TRUE_IDENTITY, KONAMI_CODE } from './util';
 
 import { useGlobal } from '@/components/providers/global-provider/global-provider';
