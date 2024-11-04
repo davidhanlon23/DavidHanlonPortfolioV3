@@ -57,14 +57,13 @@ export const ABOUT_DATA = {
         'Asana'
     ],
     currentFocus: `
-    I'm currently diving deep into serverless architectures and exploring the potential of AI in mobile and web development. 
-                  Always looking to connect with like-minded professionals and innovative companies pushing the boundaries of what's possible in tech.`,
-    /** @TODO */
+      I'm currently diving deep into serverless architectures and exploring the potential of AI in mobile and web development. 
+      Always looking to connect with like-minded professionals and innovative companies pushing the boundaries of what's possible in tech.`,
     hobbies: `
-                   When I'm not coding, you can find me exploring the latest tech trends, contributing to open-source projects, 
-                  or enjoying a good cup of coffee while brainstorming my next big idea. I believe in the power of technology 
-                  to solve real-world problems and am always excited to take on new challenges.
-                  `,
+      When I'm not coding, you can find me on the soccer field playing a match, watching Premier League games, 
+      or challenging friends to a game of paddle or tennis. I'm also an avid video gamer and love exploring new 
+      destinations through travel. On Sundays during football season, you'll likely catch me pulling my hair out watching the Ravens 
+      while strategizing my next coding project.`,
     about: `Hi, I am David Hanlon. 
   \n I am an ambitious, optimistic, and dependable Senior Level Software Engineer with a passion for developing software and pushing the limits of my current programming and problem solving skill set.
   \n I have many hobbies but the one I am passionate about most is my dedication and commitment to the pursuit of life long learning. I am always looking for opportunities to grow as an individual and projects that give me an opportunity to make a difference and do something meaningful.
