@@ -5,7 +5,8 @@ import {
   GraduationCap,
   Contact,
   BriefcaseBusiness,
-  FolderGit2
+  FolderGit2,
+  User
 } from "lucide-react"
 import { DarkModeToggle, HackerModeButton, NavMain, RandomThemeButton } from '@/elements';
 import {
@@ -23,9 +24,9 @@ import Logo from '@/components/icons/logo';
 const data = {
   navMain: [
     {
-      title: "Projects",
-      url: "#projects",
-      icon: FolderGit2,
+      title: "About",
+      url: "#about",
+      icon: User,
     },
     {
       title: "Experience",
@@ -36,6 +37,11 @@ const data = {
       title: "Education",
       url: "#education",
       icon: GraduationCap,
+    },
+    {
+      title: "Showcase",
+      url: "#showcase",
+      icon: FolderGit2,
     },
     {
       title: "Contact",

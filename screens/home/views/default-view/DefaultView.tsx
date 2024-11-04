@@ -1,4 +1,4 @@
-import { CryptoHero, Projects, Experience, Education, Contact, About } from '../../components';
+import { CryptoHero, Showcase, Experience, Education, Contact, About } from '../../components';
 
 const DefaultView = () => {
     return (
@@ -7,7 +7,7 @@ const DefaultView = () => {
             <About />
             <Experience />
             <Education />
-            <Projects />
+            <Showcase />
             <Contact /> 
         </>
     );

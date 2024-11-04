@@ -9,10 +9,10 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/ui"
 import { ABOUT_DATA } from './constants';
 
 export default function AboutMe() {
-    const { skills, professionalSummary, hobbies, currentFocus, avatarUrl } = ABOUT_DATA;
+  const { skills, professionalSummary, hobbies, currentFocus, avatarUrl } = ABOUT_DATA;
 
   return (
-    <section className="py-16 bg-white dark:bg-black">
+    <section id="about" className="py-16 bg-white dark:bg-black">
       <div className="container mx-auto px-4">
         <motion.h2 
           className="text-4xl font-bold mb-8 text-center"
