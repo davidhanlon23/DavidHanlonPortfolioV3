@@ -17,7 +17,7 @@ export const getThemeStyles = (theme: Theme, isRedPillMode: boolean, isDejaVu: b
   }
   return `${baseStyles} ${isRedPillMode ? 'invert' : ''} ${isDejaVu ? 'animate-pulse' : ''}`
 }
-/** @TODO - update Skills */
+
 export const getSkillInfo = (skill: string, isNeoVision: boolean): string => {
   const normalSkillInfo: { [key: string]: string } = {
     nodejs: 'Node.js: 10 years of experience, building scalable backend services',
@@ -26,7 +26,7 @@ export const getSkillInfo = (skill: string, isNeoVision: boolean): string => {
     reactnative: 'React Native (using expo): 2 years of experience, building hybrid mobile applications',
     solidity: 'Solidity: 2 years of experience, building smart contracts and dApps',
     nestjs: 'Nest.js: 2 years of experience, building scalable backend micro services',
-    prismaorm: 'PrismaORM: 2 years of experience',
+    prisma: 'Prisma: 2 years of experience',
   }
 
   const matrixSkillInfo: { [key: string]: string } = {
@@ -36,13 +36,13 @@ export const getSkillInfo = (skill: string, isNeoVision: boolean): string => {
     reactnative: 'React Native: Ability to project the Matrix across multiple digital realms',
     solidity: 'Solidity: Command over the immutable contracts that govern the blockchain Matrix',
     nestjs: 'Nest.js: Architect of the deep structures within the Matrix core',
-    prismaorm: 'PrismaORM: Manipulation of the underlying data streams that flow through the Matrix',
+    prisma: 'PrismaORM: Manipulation of the underlying data streams that flow through the Matrix',
   }
 
   const skillInfo = isNeoVision ? matrixSkillInfo : normalSkillInfo
   return skillInfo[skill] || `No detailed info available for ${skill}`
 }
-/** @TODO - update Skills */
+
 export const generateResume = (): string => {
   return `
 David Hanlon
@@ -62,13 +62,13 @@ Skills:
 - Frontend: React, Next.js, React Native, Expo, Ionic Framework
 - Backend: Node.js, Express, Nest.js
 - Databases: PostgreSQL, NoSQL, MongoDB, PrismaORM
-- Web3: Solidity, Rainbow Kit,  Ganache, Hard Hat, Open Zeppelin
+- Web3: Solidity, Rainbow Kit, Ganache, Hard Hat, Open Zeppelin
 - Infrastructure: Docker, Render, Vercel
 - Cloud: AWS
 
 Education:
 - College: Bachelor's Degree in Computer Science, Towson University
-- High School: Worcester Technical High School, Pocomoke High School
+- High School: Worcester Technical High School & Pocomoke High School
 
 `
 }

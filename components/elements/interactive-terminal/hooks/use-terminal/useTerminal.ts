@@ -54,7 +54,7 @@ const useTerminal = () => {
           isAsciiArt = true
           break
         case 'help':
-          output = `Available commands: about, skills, projects, contact, theme, game, resume, chat, clear, exit${
+          output = `Available commands: about, skills, contact, theme, game, resume, chat, clear, exit${
             isNeoVision ? ", neo_vision, red_pill, deja_vu, there_is_no_spoon, true_identity" : ""
           }`
           break
@@ -63,12 +63,12 @@ const useTerminal = () => {
           isTyping = true
           break
         case 'skills':
-          output = `My skills include: ${ABOUT_DATA['skills'].join(', ')} and more. Type "skills <skill>" for more info.`
+          output = `My skills include: nodejs, react, typescript, reactnative, solidity, nestjs, prisma and more. Type "skills <skill>" for more info.`
           break
         /** @TODO - update projects */
-        case 'projects':
-          output = 'Some of my projects: 1. AI-powered chat application, 2. E-commerce platform, 3. Data visualization dashboard'
-          break
+        // case 'projects':
+        //   output = 'Some of my projects: 1. AI-powered chat application, 2. E-commerce platform, 3. Data visualization dashboard'
+        //   break
         case 'contact':
           output = `Email: ${CONTACT_INFO['email']} | LinkedIn: ${CONTACT_INFO['linkedin']} | GitHub: ${CONTACT_INFO['github']} & ${CONTACT_INFO['github_alt']} | Instagram: ${CONTACT_INFO['instagram']}`
           break
