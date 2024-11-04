@@ -56,9 +56,8 @@ export const ABOUT_DATA = {
         'Notion',
         'Asana'
     ],
-    /** @TODO */
     currentFocus: `
-    I'm currently diving deep into serverless architectures and exploring the potential of AI in web development. 
+    I'm currently diving deep into serverless architectures and exploring the potential of AI in mobile and web development. 
                   Always looking to connect with like-minded professionals and innovative companies pushing the boundaries of what's possible in tech.`,
     /** @TODO */
     hobbies: `

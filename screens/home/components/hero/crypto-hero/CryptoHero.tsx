@@ -5,13 +5,12 @@ import { Button } from "@/components/ui/button"
 import Link from 'next/link'
 import { useIsDarkMode } from '@/hooks'
 import { TypeWriter } from '../../contact/components'
-import { useGlobal } from '@/components/providers/global-provider/global-provider';
+import { useScrollToSection } from '@/hooks';
 
 const CryptoHero = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const { isDarkMode} = useIsDarkMode();
-  const { view } = useGlobal();
-
+  const { scrollToSection } = useScrollToSection();
   useEffect(() => {
     const canvas = canvasRef.current
     if (!canvas) return
@@ -100,14 +99,14 @@ const CryptoHero = () => {
           <TypeWriter text="David Hanlon" />
         </h1>
         <p className="text-xl sm:text-2xl md:text-3xl text-muted-foreground mb-8">
-        Full Stack Engineer, Entrepreneur, & Blockchain Enthusiast
+        Full Stack Engineer, Entrepreneur, & Technology Enthusiast
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <Button asChild size="lg">
-            <Link href="#projects">View Projects</Link>
+            <Link href="#showcase" onClick={scrollToSection('showcase')}>View Showcase</Link>
           </Button>
           <Button asChild variant="outline" size="lg" color="primary">
-            <Link href="#contact">Work with Me</Link>
+            <Link href="#contact" onClick={scrollToSection('contact')}>Work with Me</Link>
           </Button>
         </div>
       </div>
