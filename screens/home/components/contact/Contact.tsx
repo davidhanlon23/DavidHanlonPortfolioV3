@@ -30,7 +30,7 @@ const ContactSection = () => {
               <p className="text-gray-500 dark:text-gray-300">Open to new opportunities</p>
             </div>
           </div>
-          <div className="w-full md:w-1/2"><ContactForm /></div>
+          {/* <div className="w-full md:w-1/2"><ContactForm /></div> */}
 
       </motion.div>
     </section>
