@@ -1,6 +1,7 @@
 export interface Project {
     id: number
     title: string
+    comingSoon?: boolean
     description: string
     technologies: string[]
     imageUrl: string

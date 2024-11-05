@@ -8,7 +8,7 @@ import { PROJECT_DATA } from './constants'
 
 export function Showcase() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null)
-
+  const projects = PROJECT_DATA.filter((project) => project.type === 'work-project' || project.type === 'side-project')
   return (
     <section id="showcase" className="py-16 bg-white dark:bg-black">
       <div className="container mx-auto px-4">
@@ -19,7 +19,7 @@ export function Showcase() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, staggerChildren: 0.1 }}
         >
-          {PROJECT_DATA.map((project) => (
+          {projects.map((project) => (
             <ProjectCard
               key={project.id}
               project={project}

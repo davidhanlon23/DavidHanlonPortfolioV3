@@ -9,7 +9,7 @@ export const PROJECT_DATA: Project[] = [
     githubUrl: 'https://github.com/0xDreamLabs/stellr',
     liveUrl: 'https://stellr.social',
     images: ['/Images/projectImages/stellrProject.webp'],
-    type: 'side-project'
+    type: 'personal-project'
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ export const PROJECT_DATA: Project[] = [
     githubUrl: 'https://github.com/0xD4V1NC1/leverage-trading-calculator',
     liveUrl: 'https://leveragetradingcalculator.com',
     images: ['/Images/projectImages/ltcProject.webp'],
-    type: 'side-project'
+    type: 'personal-project'
   },
   {
     id: 3,
@@ -31,7 +31,7 @@ export const PROJECT_DATA: Project[] = [
     githubUrl: 'https://github.com/0xD4V1NC1/nft-minting-site',
     liveUrl: 'https://pl7yg-5aaaa-aaaad-qbwiq-cai.ic.fleek.co/',
     images: ['/Images/projectImages/0xWFNFT.webp'],
-    type: 'side-project'
+    type: 'personal-project'
   },
   {
     id: 4,
@@ -42,7 +42,7 @@ export const PROJECT_DATA: Project[] = [
     githubUrl: '',
     liveUrl: 'https://Endeavors.tv',
     images: ['/Images/projectImages/sleeplessGamersProject.webp'],
-    type: 'side-project'
+    type: 'personal-project'
   },
   {
     id: 5,
@@ -76,5 +76,39 @@ export const PROJECT_DATA: Project[] = [
     liveUrl: '',
     images: ['/Images/projectImages/expenseTrackerProject.webp'],
     type: 'personal-project'
-  }
+  },
+  {
+    id: 8,
+    title: 'Jumpcut',
+    description: `Jumpcut provides an AI-powered IP management platform for entertainment industry executives. The platform analyzes scripts and content using proprietary agentic architecture and LLMs to identify key narrative elements like flashbacks, POV shifts, and tonal variations. This helps development executives, agents, and managers make more informed decisions when selecting stories for screen adaptation.`,
+    technologies: ['NextJS', 'React', 'Material UI', 'NodeJS', 'NestJS','PostgreSQL', 'NoSQL', 'MongoDB', 'Prisma', 'Docker', 'Solidity', 'Hard Hat', 'Render', 'Vercel'],
+    imageUrl: '',
+    githubUrl: '',
+    liveUrl: 'https://www.jumpcutmedia.com/',
+    images: [''],
+    type: 'work-project'
+  },
+  {
+    id: 9,
+    title: 'Cybrary',
+    description: 'Cybrary is an online cyber security training platform equipped with a robust content catalog and in browser lab environments supporting over 3 million users worldwide',
+    technologies: ['JavaScript', 'TypeScript', 'React', 'React Native', 'Semantic UI', 'TailwindCSS', 'NodeJS', 'PHP', 'PostgreSQL', 'Kubernetes', 'Gatsby', 'Contentful CMS', 'Google Cloud Platform'],
+    imageUrl: '',
+    githubUrl: '',
+    liveUrl: `https://www.cybrary.it`,
+    images: [''],
+    type: 'work-project'
+  },
+  {
+    id: 10,
+    title: 'Trendz',
+    comingSoon: true,
+    description: `Trendz is a software based Trading Journal powered by AI to help traders track their trades, analyze their trading patterns, and discover potential trade opportunities based on their trading history.`,
+    technologies: ['React', 'NodeJS', 'NestJS', 'PostgreSQL', 'ShadCN UI', 'Render', 'TypeScript'],
+    imageUrl: '',
+    githubUrl: '',
+    liveUrl: 'https://www.trendz.cash',
+    images: ['/Images/projectImages/trendz.png'],
+    type: 'side-project'
+  },
 ];
