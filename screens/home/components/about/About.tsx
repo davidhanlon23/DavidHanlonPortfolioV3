@@ -7,12 +7,13 @@ import { Badge } from "@/components/ui/badge"
 import { ArrowRight, Code, Briefcase, Coffee, Lightbulb } from 'lucide-react'
 import { Avatar, AvatarFallback, AvatarImage } from "@/ui"
 import { ABOUT_DATA } from './constants';
-
+import { useScrollToSection } from "@/hooks";
 export default function AboutMe() {
-    const { skills, professionalSummary, hobbies, currentFocus, avatarUrl } = ABOUT_DATA;
+  const { scrollToSection } = useScrollToSection();
+  const { skills, professionalSummary, hobbies, currentFocus, avatarUrl } = ABOUT_DATA;
 
   return (
-    <section className="py-16 bg-white dark:bg-black">
+    <section id="about" className="py-16 bg-white dark:bg-black">
       <div className="container mx-auto px-4">
         <motion.h2 
           className="text-4xl font-bold mb-8 text-center"
@@ -110,9 +111,8 @@ export default function AboutMe() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 1.2 }}
         >
-        {/** @TODO update this */}
-          <Button size="lg" className="group">
-            View My Projects
+          <Button size="lg" className="group" onClick={scrollToSection('showcase')}>
+            View My Showcase
             <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
           </Button>
         </motion.div>

@@ -1,9 +1,6 @@
 'use client'
-
 import { useState, useRef, useEffect } from 'react'
-import { Experience } from '@/screens/home/components/experience/types';
 import { ExperienceCard } from './components';
-
 import { EXPERIENCE_DATA } from './constants';
   
 const ExperienceSection = () => {

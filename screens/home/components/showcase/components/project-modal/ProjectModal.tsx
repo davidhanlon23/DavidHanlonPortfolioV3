@@ -1,7 +1,7 @@
 'use client'
 import { Badge, Button, Dialog, DialogContent, DialogHeader, DialogTitle, ImageCarousel } from '@/ui'
 import { ExternalLink, Github } from 'lucide-react'
-import { Project } from '@/screens/home/components/projects/types'
+import { Project } from '../../types';
 
 interface ProjectModalProps {
   project: Project
@@ -9,6 +9,8 @@ interface ProjectModalProps {
 }
 
 function ProjectModal({ project, onClose }: ProjectModalProps) {
+  const hasGithubUrl = project.githubUrl !== ''
+  const hasLiveUrl = project.liveUrl !== ''
   return (
     <Dialog open={true} onOpenChange={onClose} >
       <DialogContent className="sm:max-w-[425px] bg-white dark:bg-gray-900 shadow-lg" aria-describedby="dialog-description">
@@ -24,14 +26,18 @@ function ProjectModal({ project, onClose }: ProjectModalProps) {
             ))}
           </div>
           <div className="flex justify-between mt-4">
-            <Button variant="outline" onClick={() => window.open(project.githubUrl, '_blank')}>
-              <Github className="mr-2 h-4 w-4" />
-              GitHub
-            </Button>
-            <Button onClick={() => window.open(project.liveUrl, '_blank')}>
-              <ExternalLink className="mr-2 h-4 w-4" />
-              Live Demo
-            </Button>
+            {hasGithubUrl && (
+              <Button variant="outline" onClick={() => window.open(project.githubUrl, '_blank')}>
+                <Github className="mr-2 h-4 w-4" />
+                GitHub
+              </Button>
+            )}
+            {hasLiveUrl && (
+              <Button onClick={() => window.open(project.liveUrl, '_blank')}>
+                <ExternalLink className="mr-2 h-4 w-4" />
+                Live Demo
+              </Button>
+            )}
           </div>
         </div>
       </DialogContent>
