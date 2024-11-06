@@ -10,7 +10,7 @@ const EducationSection = () => {
         <h2 className="text-3xl font-bold text-center mb-12">Education</h2>
         <div className="relative">
           {/* Timeline */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gray-300 dark:bg-gray-700" />
+          <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gray-300 dark:bg-gray-700" />
           
           {EDUCATION_DATA.map((entry, index) => (
             <motion.div

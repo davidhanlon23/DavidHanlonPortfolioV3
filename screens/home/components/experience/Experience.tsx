@@ -32,7 +32,7 @@ const ExperienceSection = () => {
                         Career Journey
                     </h2>
                     <div ref={timelineRef} className="relative min-h-[500px]">
-                        <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gray-300 dark:bg-gray-700" />
+                        <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gray-300 dark:bg-gray-700" />
                         {EXPERIENCE_DATA.map((exp, index) => (
                             <ExperienceCard key={index} experience={exp} index={index} />
                         ))}
