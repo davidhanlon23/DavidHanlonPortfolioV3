@@ -42,7 +42,7 @@ export default function AboutMe() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            <Card className="h-full">
+            <Card className="h-full dark:bg-gray-900">
               <CardContent className="p-6">
                 <h3 className="text-2xl font-semibold mb-4 flex items-center">
                   <Briefcase className="mr-2" /> Professional Summary
@@ -58,7 +58,7 @@ export default function AboutMe() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.6 }}
           >
-            <Card className="h-full">
+            <Card className="h-full dark:bg-gray-900">
               <CardContent className="p-6">
                 <h3 className="text-2xl font-semibold mb-4 flex items-center">
                   <Code className="mr-2" /> Skills
@@ -76,7 +76,7 @@ export default function AboutMe() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.8 }}
           >
-            <Card className="h-full">
+            <Card className="h-full dark:bg-gray-900">
               <CardContent className="p-6">
                 <h3 className="text-2xl font-semibold mb-4 flex items-center">
                   <Coffee className="mr-2" /> A Bit More About Me
@@ -94,7 +94,7 @@ export default function AboutMe() {
           transition={{ duration: 0.5, delay: 1 }}
           className="mt-8"
         >
-          <Card>
+          <Card className="dark:bg-gray-900">
             <CardContent className="p-6">
               <h3 className="text-2xl font-semibold mb-4 flex items-center">
                 <Lightbulb className="mr-2" /> Current Focus

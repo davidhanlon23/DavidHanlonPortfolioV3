@@ -19,7 +19,7 @@ const EducationSection = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
               className={`flex flex-col md:flex-row items-center gap-8 mb-16 ${
-                index % 2 === 0 ? 'md:flex-row-reverse' : ''
+                index % 2 === 0 ? 'md:flex-row-reverse ml-4' : 'mr-4'
               }`}
             >
               <div className="w-full md:w-1/2">

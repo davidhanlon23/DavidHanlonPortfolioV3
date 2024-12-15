@@ -19,6 +19,9 @@ interface ProjectCardProps {
         <CardContent className="p-4">
           <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
           {project.comingSoon && <Badge variant="secondary" className="mb-4 bg-primary">Coming Soon</Badge>}
+          {project.type === "work-project" && <Badge variant="outline" className="mb-4 bg-primary">Work</Badge>}
+          {project.type === "side-project" && <Badge variant="secondary" className="mb-4">Personal Project</Badge>}
+
           <p className="text-muted-foreground mb-4">{project.description}</p>
         </CardContent>
         <CardFooter className="px-4 pb-4 pt-0 flex flex-wrap gap-2">
