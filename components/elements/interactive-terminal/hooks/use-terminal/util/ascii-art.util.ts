@@ -8,8 +8,8 @@ export const WELCOME_MESSAGE = `
 Welcome to David Hanlon's Matrix-style interactive portfolio terminal!
 Type 'help' to see available commands.
 
-Hint: Some say there's a hidden cheat code from the golden age of gaming...
-Can you unlock the secrets of the Matrix?
+Easter Egg: The Konami code can unlock the secrets 
+to the Matrix
 `;
 export const THERE_IS_NO_SPOON = `
             _____

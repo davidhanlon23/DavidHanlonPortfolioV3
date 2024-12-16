@@ -80,12 +80,12 @@ export const PROJECT_DATA: Project[] = [
   // {
   //   id: 8,
   //   title: 'Jumpcut',
-  //   description: `Jumpcut provides an AI-powered IP management platform for entertainment industry executives. The platform analyzes scripts and content using proprietary agentic architecture and LLMs to identify key narrative elements like flashbacks, POV shifts, and tonal variations. This helps development executives, agents, and managers make more informed decisions when selecting stories for screen adaptation.`,
+  //   description: `Jumpcut provides an AI-powered IP management platform for entertainment industry executives. The platform analyzes scripts and content using proprietary agentic architecture and LLMs to identify key narrative elements like flashbacks, POV shifts, and tonal variations.`,
   //   technologies: ['NextJS', 'React', 'Material UI', 'NodeJS', 'NestJS','PostgreSQL', 'NoSQL', 'MongoDB', 'Prisma', 'Docker', 'Solidity', 'Hard Hat', 'Render', 'Vercel'],
   //   imageUrl: '',
   //   githubUrl: '',
   //   liveUrl: 'https://www.jumpcutmedia.com/',
-  //   images: ['/Images/projectImages/jumpcut1.png', '/Images/projectImages/jumpcut2.png', '/Images/projectImages/jumpcut3.png', '/Images/projectImages/jumpcut4.png', '/Images/projectImages/jumpcut5.png'],
+  //   images: ['/Images/projectImages/jumpcut-0.png', '/Images/projectImages/jumpcut1.png', '/Images/projectImages/jumpcut2.png', '/Images/projectImages/jumpcut3.png', '/Images/projectImages/jumpcut4.png', '/Images/projectImages/jumpcut5.png'],
   //   type: 'work-project'
   // },
   {
@@ -96,19 +96,18 @@ export const PROJECT_DATA: Project[] = [
     imageUrl: '',
     githubUrl: '',
     liveUrl: `https://www.cybrary.it`,
-    images: ['/Images/projectImages/cybrary1.png', '/Images/projectImages/cybrary2.png', '/Images/projectImages/cybrary3.png', '/Images/projectImages/cybrary4.png', '/Images/projectImages/cybrary5.png'],
+    images: ['/Images/projectImages/cybrary-0.png', '/Images/projectImages/cybrary1.png', '/Images/projectImages/cybrary2.png', '/Images/projectImages/cybrary3.png', '/Images/projectImages/cybrary4.png', '/Images/projectImages/cybrary5.png'],
     type: 'work-project'
   },
   {
     id: 10,
     title: 'Trendz',
-    comingSoon: true,
     description: `Trendz is a software based Trading Journal powered by AI to help traders track their trades, analyze their trading patterns, and discover potential trade opportunities based on their trading history.`,
-    technologies: ['React', 'NodeJS', 'NestJS', 'PostgreSQL', 'ShadCN UI', 'Render', 'TypeScript'],
+    technologies: ['NodeJS','TypeScript', 'React', 'NextJS', 'ShadCN UI', 'NestJS', 'PostgreSQL', 'Render', 'Cheerio', 'OpenAI SDK', 'Anthropic SDK', 'Vercel'],
     imageUrl: '',
     githubUrl: '',
     liveUrl: 'https://www.trendz.cash',
-    images: ['/Images/projectImages/trendz.png'],
+    images: ['/Images/projectImages/trendz-0.png','/Images/projectImages/trendz-4.png', '/Images/projectImages/trendz-5.png', '/Images/projectImages/trendz-6.png', '/Images/projectImages/trendz-7.png', '/Images/projectImages/trendz-1.png' ],
     type: 'side-project'
   },
 ];
