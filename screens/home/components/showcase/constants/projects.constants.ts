@@ -77,17 +77,19 @@ export const PROJECT_DATA: Project[] = [
     images: ['/Images/projectImages/expenseTrackerProject.webp'],
     type: 'personal-project'
   },
-  // {
-  //   id: 8,
-  //   title: 'Jumpcut',
-  //   description: `Jumpcut provides an AI-powered IP management platform for entertainment industry executives. The platform analyzes scripts and content using proprietary agentic architecture and LLMs to identify key narrative elements like flashbacks, POV shifts, and tonal variations.`,
-  //   technologies: ['NextJS', 'React', 'Material UI', 'NodeJS', 'NestJS','PostgreSQL', 'NoSQL', 'MongoDB', 'Prisma', 'Docker', 'Solidity', 'Hard Hat', 'Render', 'Vercel'],
-  //   imageUrl: '',
-  //   githubUrl: '',
-  //   liveUrl: 'https://www.jumpcutmedia.com/',
-  //   images: ['/Images/projectImages/jumpcut-0.png', '/Images/projectImages/jumpcut1.png', '/Images/projectImages/jumpcut2.png', '/Images/projectImages/jumpcut3.png', '/Images/projectImages/jumpcut4.png', '/Images/projectImages/jumpcut5.png'],
-  //   type: 'work-project'
-  // },
+  {
+    id: 8,
+    title: 'Jumpcut',
+    description: `Jumpcut provides an AI-powered IP management platform for entertainment industry executives. The platform analyzes scripts and content using proprietary agentic architecture and LLMs to identify key narrative elements like flashbacks, POV shifts, and tonal variations.`,
+    technologies: ['NextJS', 'React', 'Material UI', 'NodeJS', 'NestJS','PostgreSQL', 'NoSQL', 'MongoDB', 'Prisma', 'Docker', 'Solidity', 'Hard Hat', 'Render', 'Vercel'],
+    imageUrl: '',
+    githubUrl: '',
+    liveUrl: 'https://www.jumpcutmedia.com/',
+    // images: ['/Images/projectImages/jumpcut-0.png', '/Images/projectImages/jumpcut1.png', '/Images/projectImages/jumpcut2.png', '/Images/projectImages/jumpcut3.png', '/Images/projectImages/jumpcut4.png', '/Images/projectImages/jumpcut5.png'],
+    images: ['/Images/projectImages/jumpcut-0.png'],
+    type: 'work-project',
+    comingSoon: true,
+  },
   {
     id: 9,
     title: 'Cybrary',

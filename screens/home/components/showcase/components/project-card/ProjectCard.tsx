@@ -18,7 +18,7 @@ interface ProjectCardProps {
         <ImageCarousel images={project.images} alt={project.title} />
         <CardContent className="p-4">
           <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-          {project.comingSoon && <Badge variant="secondary" className="mb-4 bg-primary">Coming Soon</Badge>}
+          {project.comingSoon && <Badge variant="secondary" className="mb-4 bg-primary mr-2">Coming Soon</Badge>}
           {project.type === "work-project" && <Badge variant="outline" className="mb-4 bg-primary">Work</Badge>}
           {project.type === "side-project" && <Badge variant="secondary" className="mb-4">Personal Project</Badge>}
 

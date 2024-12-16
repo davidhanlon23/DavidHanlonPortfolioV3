@@ -15,6 +15,25 @@ export const metadata: Metadata = {
     template: `%s | David M. Hanlon`
   },
   metadataBase: new URL('https://davidmhanlon.com'),
+  description: 'Senior Software Engineer with over half a decade of frontend development experience, I specialize in building scalable, user-centric solutions within hyper-growth startup environments. Proven ability to drive rapid innovation and deliver high-impact features that enhance performance and user engagement.',
+  openGraph: {
+    title: 'David Hanlon',
+    description: 'Senior Software Engineer with over half a decade of frontend development experience, I specialize in building scalable, user-centric solutions within hyper-growth startup environments. Proven ability to drive rapid innovation and deliver high-impact features that enhance performance and user engagement.',
+    images: [
+      {
+        url: '/Images/DH.png',
+        width: 1200,
+        height: 630,
+        alt: `David Hanlon's Portfolio`,
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'David Hanlon',
+    description: 'Senior Software Engineer with over half a decade of frontend development experience, I specialize in building scalable, user-centric solutions within hyper-growth startup environments. Proven ability to drive rapid innovation and deliver high-impact features that enhance performance and user engagement.',
+    images: ['/Images/DH.png'],
+  },
 };
 
 export default function RootLayout({ children }: RootLayoutProps) {

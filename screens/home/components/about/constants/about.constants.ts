@@ -10,15 +10,7 @@ export const ABOUT_DATA = {
         'Tailwind',
         'ShadCN',
         'ChakraUI',
-        
-        // Web 3
-        'Solidity',
-        'Ganache',
-        'Rainbow Kit',
-        'Alchemy',
-        'IPFS',
-        'Hard Hat',
-        'Open Zeppelin',
+        'SlateJS',
         
         // Back End
         'NodeJS',
@@ -31,30 +23,50 @@ export const ABOUT_DATA = {
         'Prisma',
         'PostgreSQL',
         'MongoDB',
-        
-        // Tooling and Testing
-        'Storybook',
-        'Jest',
-        
+        'Pinecone',
+
         // Mobile Development
         'React Native',
         'NativeBase',
         'Expo',
         'Ionic',
+
+        // LLM
+        'Agentic AI Architecture',
+        'Retrieval Augmented Generation (RAG)',
+        'VoyageAI Embeddings',
+        'Anthropic Sdk',
+        'OpenAI Sdk',
+        'Perplexity Sdk',
+        'Langchain',
+
+        // Web 3
+        'Solidity',
+        'Ganache',
+        'Rainbow Kit',
+        'Alchemy',
+        'IPFS',
+        'Hard Hat',
+        'Open Zeppelin',
         
         // Cloud Infrastructure
         'Amazon Web Services (AWS)',
         'Google Cloud Platform (GCP)',
         'Heroku',
         'Docker',
-        
+        'Inngest',
+
+        // Tooling and Testing
+        'Storybook',
+        'Jest',
+
         // Additional Software
         'Adobe Suite',
         'Figma',
         'Sketch',
         'GitHub',
         'Notion',
-        'Asana'
+        'Asana',
     ],
     currentFocus: `
       I'm currently diving deep into serverless architectures and exploring the potential of AI in mobile and web development. 
