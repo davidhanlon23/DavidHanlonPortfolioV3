@@ -11,6 +11,7 @@ interface ProjectModalProps {
 function ProjectModal({ project, onClose }: ProjectModalProps) {
   const hasGithubUrl = project.githubUrl !== ''
   const hasLiveUrl = project.liveUrl !== ''
+  const hasAdditionalUrls = project?.additionalUrls?.length && project?.additionalUrls?.length > 0;
   return (
     <Dialog open={true} onOpenChange={onClose} >
       <DialogContent className="sm:max-w-[425px] bg-white dark:bg-gray-900 shadow-lg" aria-describedby="dialog-description">
@@ -35,10 +36,22 @@ function ProjectModal({ project, onClose }: ProjectModalProps) {
             {hasLiveUrl && (
               <Button onClick={() => window.open(project.liveUrl, '_blank')}>
                 <ExternalLink className="mr-2 h-4 w-4" />
-                Live Demo
+                Live Site
               </Button>
             )}
           </div>
+          {/* { hasAdditionalUrls && (
+              <div>
+                {project.additionalUrls?.map((additionalItem) => {
+                  return(
+                    <Button onClick={() => window.open(additionalItem.url, '_blank')}>
+                       <ExternalLink className="mr-2 h-4 w-4" />
+                       {additionalItem.title}
+                    </Button>
+                  );
+                })}
+              </div>
+           )} */}
         </div>
       </DialogContent>
     </Dialog>

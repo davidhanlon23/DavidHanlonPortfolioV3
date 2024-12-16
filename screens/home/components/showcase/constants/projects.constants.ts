@@ -81,7 +81,7 @@ export const PROJECT_DATA: Project[] = [
     id: 8,
     title: 'Jumpcut',
     description: `Jumpcut provides an AI-powered IP management platform for entertainment industry executives. The platform analyzes scripts and content using proprietary agentic architecture and LLMs to identify key narrative elements like flashbacks, POV shifts, and tonal variations.`,
-    technologies: ['NextJS', 'React', 'Material UI', 'NodeJS', 'NestJS','PostgreSQL', 'NoSQL', 'MongoDB', 'Prisma', 'Docker', 'Solidity', 'Hard Hat', 'Render', 'Vercel'],
+    technologies: ['NextJS', 'React', 'Material UI', 'NodeJS', 'NestJS','PostgreSQL', 'NoSQL', 'MongoDB', 'Prisma', 'Docker', 'Solidity', 'Hard Hat', 'Render', 'Vercel', 'RAG'],
     imageUrl: '',
     githubUrl: '',
     liveUrl: 'https://www.jumpcutmedia.com/',
@@ -89,6 +89,15 @@ export const PROJECT_DATA: Project[] = [
     images: ['/Images/projectImages/jumpcut-0.png'],
     type: 'work-project',
     comingSoon: true,
+    additionalUrls: [{
+      url: 'https://opensea.io/collection/women-of-mystery',
+      title: 'Opensea Collection',
+    },
+    {
+      url:  'https://etherscan.io/token/0x20355d27c1bfe6e0851b48b6e56e97e10b1481f4#code',
+      title: 'Contract Address'
+    }
+  ]
   },
   {
     id: 9,
@@ -105,7 +114,7 @@ export const PROJECT_DATA: Project[] = [
     id: 10,
     title: 'Trendz',
     description: `Trendz is a software based Trading Journal powered by AI to help traders track their trades, analyze their trading patterns, and discover potential trade opportunities based on their trading history.`,
-    technologies: ['NodeJS','TypeScript', 'React', 'NextJS', 'ShadCN UI', 'NestJS', 'PostgreSQL', 'Render', 'Cheerio', 'OpenAI SDK', 'Anthropic SDK', 'Vercel'],
+    technologies: ['NodeJS','TypeScript', 'React', 'NextJS', 'ShadCN UI', 'NestJS', 'PostgreSQL', 'Render', 'Cheerio', 'OpenAI SDK', 'Anthropic SDK', 'Vercel', 'RAG'],
     imageUrl: '',
     githubUrl: '',
     liveUrl: 'https://www.trendz.cash',
