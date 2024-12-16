@@ -1,6 +1,6 @@
 export const ABOUT_DATA = {
     professionalSummary: `Senior Software Engineer with over half a decade of frontend development experience, I specialize in building scalable, user-centric solutions within hyper-growth startup environments. Proven ability to drive rapid innovation and deliver high-impact features that enhance performance and user engagement.`,
-    avatarUrl: "/Images/davidHanlon.jpg",
+    avatarUrl: "/Images/david-2.jpg",
     skills: [
         // Front End
         'React',

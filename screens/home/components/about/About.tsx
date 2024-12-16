@@ -31,7 +31,10 @@ export default function AboutMe() {
             className="flex flex-col items-center justify-center"
           >
             <Avatar className="w-48 h-48 mb-4">
-              <AvatarImage src={avatarUrl} alt="David Hanlon" />
+              <AvatarImage 
+                src={avatarUrl} 
+                alt="David Hanlon" 
+              />
               <AvatarFallback>DH</AvatarFallback>
             </Avatar>
             <h3 className="text-2xl font-semibold mt-4">David Hanlon</h3>
