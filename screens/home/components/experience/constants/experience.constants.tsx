@@ -5,7 +5,7 @@ export const EXPERIENCE_DATA = [
     logo: <JumpcutLogo classes="w-12 h-12 text-black" />,
     title: "Founding Engineer",
     startDate: "August 2022",
-    endDate: "Present",
+    endDate: "December 2024",
     location: "San Francisco, CA",
     url: "https://www.jumpcutmedia.com",
     responsibilities: [
