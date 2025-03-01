@@ -85,10 +85,10 @@ export const PROJECT_DATA: Project[] = [
     imageUrl: '',
     githubUrl: '',
     liveUrl: 'https://www.jumpcutmedia.com/',
-    // images: ['/Images/projectImages/jumpcut-0.png', '/Images/projectImages/jumpcut1.png', '/Images/projectImages/jumpcut2.png', '/Images/projectImages/jumpcut3.png', '/Images/projectImages/jumpcut4.png', '/Images/projectImages/jumpcut5.png'],
-    images: ['/Images/projectImages/jumpcut-0.png'],
+    images: ['/Images/projectImages/jumpcut-0.png', '/Images/projectImages/jumpcut1.png', '/Images/projectImages/jumpcut2.png', '/Images/projectImages/jumpcut3.png', '/Images/projectImages/jumpcut4.png', '/Images/projectImages/jumpcut5.png'],
+    // images: ['/Images/projectImages/jumpcut-0.png'],
     type: 'work-project',
-    comingSoon: true,
+    comingSoon: false,
     additionalUrls: [{
       url: 'https://opensea.io/collection/women-of-mystery',
       title: 'Opensea Collection',
