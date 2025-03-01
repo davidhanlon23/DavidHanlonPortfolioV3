@@ -10,6 +10,7 @@ export interface CalculatorFormValues {
 }
 
 export interface CalculationResults {
+  currentPrice: number;
   stopPrice: number;
   takeProfit: number;
   maxLost: number;

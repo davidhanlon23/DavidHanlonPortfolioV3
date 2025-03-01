@@ -3,12 +3,14 @@ import { CalculatorFormValues, CalculationResults } from '../../types';
 import { calculatePositionMetrics } from '../../utils/calculations';
 
 const initialCalculationState: CalculationResults = {
+  currentPrice: 0,
   stopPrice: 0,
   takeProfit: 0,
   maxLost: 0,
   maxProfit: 0,
   assetPercentChange: 0,
 };
+
 const useCalculatorState = () => {
   const [isLong, setIsLong] = useState(true);
   const [results, setResults] = useState<CalculationResults>(initialCalculationState);

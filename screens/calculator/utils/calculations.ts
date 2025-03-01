@@ -19,6 +19,7 @@ export const calculatePositionMetrics = (values: CalculatorFormValues): Calculat
     const percentIncreaseNeeded = ((takeProfitPrice - currentPrice) / currentPrice) * 100;
 
     return {
+      currentPrice,
       stopPrice: stopLostPrice,
       takeProfit: takeProfitPrice,
       maxLost: maxPossibleLost,
@@ -33,6 +34,7 @@ export const calculatePositionMetrics = (values: CalculatorFormValues): Calculat
   const percentDecreaseNeeded = ((currentPrice - takeProfitPrice) / currentPrice) * 100;
 
   return {
+    currentPrice,
     stopPrice: stopLostPrice,
     takeProfit: takeProfitPrice,
     maxLost: maxPossibleLost,
