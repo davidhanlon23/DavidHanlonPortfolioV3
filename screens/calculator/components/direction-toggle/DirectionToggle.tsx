@@ -1,15 +1,14 @@
 "use client"
 const DirectionToggle = ({
-    sectionGroupClasses, 
-    labelClasses, 
     isLong, 
     setIsLong,
   } : { 
-    sectionGroupClasses: string,
-    labelClasses: string, 
-    isLong:boolean, 
-    setIsLong: (isLong:boolean) => void 
+    isLong: boolean, 
+    setIsLong: (isLong: boolean) => void 
   }) => {
+      const sectionGroupClasses = 'grid grid-col-2 mb-4';
+      const labelClasses = 'text-2xl text-semibold text-black dark:text-white mr-4 mb-4';
+
       return (
         <div id="direction-group" className={sectionGroupClasses}>
         <label className={labelClasses} htmlFor="direction"> Trade Direction </label>
