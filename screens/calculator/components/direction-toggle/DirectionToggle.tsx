@@ -1,8 +1,17 @@
+"use client"
 const DirectionToggle = ({
-    sectionGroupClasses, labelClasses, isLong, setIsLong,
-  } : { sectionGroupClasses: string,
-    labelClasses: string, isLong:boolean, setIsLong: (isLong:boolean) => void }) => (
-      <div id="direction-group" className={sectionGroupClasses}>
+    sectionGroupClasses, 
+    labelClasses, 
+    isLong, 
+    setIsLong,
+  } : { 
+    sectionGroupClasses: string,
+    labelClasses: string, 
+    isLong:boolean, 
+    setIsLong: (isLong:boolean) => void 
+  }) => {
+      return (
+        <div id="direction-group" className={sectionGroupClasses}>
         <label className={labelClasses} htmlFor="direction"> Trade Direction </label>
         <div className="flex w-full">
           <button
@@ -22,5 +31,6 @@ const DirectionToggle = ({
           </button>
         </div>
       </div>
-  );
+      )
+    };
   export default DirectionToggle;

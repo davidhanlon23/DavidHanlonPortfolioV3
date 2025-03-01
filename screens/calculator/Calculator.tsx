@@ -1,10 +1,13 @@
 "use client"
 import React, { useState } from 'react';
 import {
-  Formik, Field, Form, ErrorMessage,
+  Formik,
+  Field as FormikField,
+  Form as FormikForm,
+  ErrorMessage as FormikError,
 } from 'formik';
 import * as Yup from 'yup';
-import { Button } from '@/components';
+import { Button } from '@/ui';
 import { DirectionToggle, Result } from './components';
 
 type Direction = 'short' | 'long';
@@ -68,7 +71,7 @@ const Calculator = () => {
   };
 
   return (
-    <div className="flex flex-col w-full">
+    <div className="flex flex-col w-full my-8">
       <Formik
         initialValues={{
           direction: isLong ? 'long' : 'short',
@@ -84,7 +87,7 @@ const Calculator = () => {
         validationSchema={CalculatorSchema}
       >
         {({ setFieldValue }) => (
-          <Form className="flex flex-col justify-center bg-gray-100 dark:bg-[#121212] shadow-2xl dark:shadow-[#222] p-4 rounded-lg mx-auto w-4/5 md:w-1/2">
+          <FormikForm className="flex flex-col justify-center bg-gray-100 dark:bg-[#121212] shadow-2xl dark:shadow-[#222] p-4 rounded-lg mx-auto w-4/5 md:w-1/2">
 
             <DirectionToggle
               isLong={isLong}
@@ -97,8 +100,8 @@ const Calculator = () => {
               <label className={labelClasses} htmlFor="collateral">
                 Collateral
               </label>
-              <Field className={fieldClasses} id="collateral" name="collateral" type="number" />
-              <ErrorMessage
+              <FormikField className={fieldClasses} id="collateral" name="collateral" type="number" />
+              <FormikError
                 component="a"
                 className={errorMsgClasses}
                 name="collateral"
@@ -109,8 +112,8 @@ const Calculator = () => {
               <label className={labelClasses} htmlFor="willingToRiskPercentage">
                 Willing to Risk (in %)
               </label>
-              <Field className={fieldClasses} id="willingToRiskPercentage" name="willingToRiskPercentage" type="number" />
-              <ErrorMessage
+              <FormikField className={fieldClasses} id="willingToRiskPercentage" name="willingToRiskPercentage" type="number" />
+              <FormikError
                 component="a"
                 className={errorMsgClasses}
                 name="willingToRiskPercentage"
@@ -121,16 +124,16 @@ const Calculator = () => {
               <label className={labelClasses} htmlFor="currentPrice">
                 Current Price
               </label>
-              <Field className={fieldClasses} id="currentPrice" name="currentPrice" type="number" />
-              <ErrorMessage component="a" className={errorMsgClasses} name="currentPrice" />
+              <FormikField className={fieldClasses} id="currentPrice" name="currentPrice" type="number" />
+              <FormikError component="a" className={errorMsgClasses} name="currentPrice" />
             </div>
 
             <div id="leverage-group" className={sectionGroupClasses}>
               <label className={labelClasses} htmlFor="leverage">
                 Leverage
               </label>
-              <Field className={fieldClasses} id="leverage" name="leverage" type="number" />
-              <ErrorMessage
+              <FormikField className={fieldClasses} id="leverage" name="leverage" type="number" />
+              <FormikError
                 component="a"
                 className={errorMsgClasses}
                 name="leverage"
@@ -141,8 +144,8 @@ const Calculator = () => {
               <label className={labelClasses} htmlFor="riskToRewardRatio">
                 Risk to Reward Ratio (i.e. 2 : 1)
               </label>
-              <Field className={fieldClasses} id="riskToRewardRatio" name="riskToRewardRatio" type="number" />
-              <ErrorMessage
+              <FormikField className={fieldClasses} id="riskToRewardRatio" name="riskToRewardRatio" type="number" />
+              <FormikError
                 component="a"
                 className={errorMsgClasses}
                 name="riskToRewardRatio"
@@ -153,14 +156,16 @@ const Calculator = () => {
               <Button
                 type="submit"
                 className="py-2 px-16 animate-pulse"
-                aria-label="calculate"
+                // aria-label="calculate"
                 color="primary"
                 onClick={() => {
                   setFieldValue('direction', isLong ? 'long' : 'short');
                 }}
-              >Calculate</Button>
+              >
+                Calculate
+              </Button>
             </div>
-          </Form>
+          </FormikForm>
         )}
 
       </Formik>
